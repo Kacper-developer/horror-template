@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+@import url("http://fonts.cdnfonts.com/css/october-crow");
+@import url("https://fonts.cdnfonts.com/css/bloodlust?styles=85048");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flexbox;
+  font-size: 14px;
+  color: #27303a;
+  font-family: "Lato";
+  overflow-x: hidden;
+}
+body .head-section {
+  height: 100vh;
+  background-color: #2c3335;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2c3335), color-stop(74%, black));
+  background-image: linear-gradient(180deg, #2c3335 0%, black 74%);
+}
+body .head-section .navbar {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: transparent;
+}
+body .head-section .navbar .navbar-brand {
+  cursor: pointer;
+  font-family: "October Crow";
+  font-weight: 900;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: red;
+}
+body .head-section .navbar .navbar-brand .icon {
+  color: red;
+  font-size: 1.2em;
+}
+body .head-section .navbar .burger {
+  position: relative;
+  top: 0.15rem;
+  right: 5%;
+  margin-left: auto;
+  display: block;
+  width: 25px;
+  cursor: pointer;
+}
+body .head-section .navbar .burger .slash {
+  border-radius: 365px;
+  margin-bottom: 0.3rem;
+  width: 100%;
+  height: 3px;
+  background: red;
+}
+body .head-section .head-section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+body .head-section .head-section-content .box-container {
+  position: relative;
+  top: -1rem;
+  display: flexbox;
+}
+body .head-section .head-section-content .box-container .my-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  width: auto;
+}
+body .head-section .head-section-content .box-container .my-image .my-image-img {
+  position: relative;
+  left: -0.5rem;
+  -webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+}
+body .head-section .head-section-content .box-container .text {
+  color: #5c2c27;
+  font-family: "Bloodlust";
+  font-size: 2.5em;
+  position: relative;
+  top: 1rem;
+  left: -1rem;
+  cursor: default;
+}
+body .head-section .head-section-content .box-container .text span {
+  position: relative;
+  top: -1.5rem;
+}/*# sourceMappingURL=Home.css.map */

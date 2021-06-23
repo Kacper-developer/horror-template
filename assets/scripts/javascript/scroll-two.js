@@ -1,0 +1,1 @@
+//ScrollReveal().reveal(target, delay: 500);

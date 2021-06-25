@@ -97,6 +97,8 @@ body{
 
           cursor: pointer;
 
+          z-index: 1001;
+
           .slash{
             border-radius: 365px;
 
@@ -107,6 +109,68 @@ body{
 
             background: red;
           }
+        }
+
+        .hamburger-menu{
+          height: 100vh;
+          width: 100vw;
+          background: #333;
+          z-index: 1000;
+          position: fixed;
+          top: 0;
+          right: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 0;
+          margin: 0;
+
+          ul{
+            padding: 0;
+            margin: 0;
+
+           a{
+            text-decoration: none;
+            color: red;
+            font-family: $bloodlust;
+            font-size: 3em;
+            margin: 0;
+            padding: 0;
+
+            li{
+              margin: 0;
+              padding: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100vw;
+              margin-bottom: .5rem;
+              transition: background .25s;
+            }
+
+            li:hover{
+              background: #252525;
+            }
+           }
+
+          }
+
+          .social{
+            cursor: default;
+            bottom: 0;
+            position: absolute;
+            height: 4rem;
+            width: 100vw;
+            background: #252525;
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+          }
+
+          
         }
       }
 

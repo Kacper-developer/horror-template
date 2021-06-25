@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
-@import url("http://fonts.cdnfonts.com/css/october-crow");
+@import url("https://fonts.cdnfonts.com/css/october-crow?styles=18073");
 @import url("https://fonts.cdnfonts.com/css/bloodlust?styles=85048");
 * {
   -webkit-box-sizing: border-box;
@@ -79,6 +79,7 @@ body .head-section .head-section-content {
           align-items: center;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 body .head-section .head-section-content .box-container {
   position: relative;
@@ -98,11 +99,11 @@ body .head-section .head-section-content .box-container .my-image {
 body .head-section .head-section-content .box-container .my-image .my-image-img {
   position: relative;
   left: -0.5rem;
-  -webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
-  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+  -webkit-filter: invert(40%) grayscale(0%) brightness(100%) sepia(100%) hue-rotate(-50deg) saturate(3500%) contrast(2);
+  filter: grayscale(0%) brightness(100%) sepia(100%) hue-rotate(-50deg) saturate(3500%) contrast(0.8);
 }
 body .head-section .head-section-content .box-container .text {
-  color: #5c2c27;
+  color: #e61919;
   font-family: "Bloodlust";
   font-size: 2.5em;
   position: relative;

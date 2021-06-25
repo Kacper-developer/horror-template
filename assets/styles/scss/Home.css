@@ -100,8 +100,8 @@ body .head-section .head-section-content .box-container .my-image {
   width: auto;
 }
 body .head-section .head-section-content .box-container .my-image .my-image-img {
-  height: auto;
-  width: auto;
+  height: 95%;
+  width: 95%;
   position: relative;
   left: -0.5rem;
   -webkit-filter: invert(40%) grayscale(0%) brightness(100%) sepia(100%) hue-rotate(-50deg) saturate(3500%) contrast(2);

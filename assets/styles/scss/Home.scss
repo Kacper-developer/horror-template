@@ -45,7 +45,11 @@ body{
       overflow: hidden;
 
       background-color: hsl(193, 9%, 19%);
-      background-image: linear-gradient(180deg, hsl(193, 9%, 19%) 0%, hsl(0, 0%, 0%) 74%);
+      background: linear-gradient(hsla(0, 0, 0%, 5%), hsl(0,0,0%)), url('../../images/wallpapers/background-section-head.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      //background-image: linear-gradient(180deg, hsl(193, 9%, 19%) 0%, hsl(0, 0%, 0%) 74%);
 
       .navbar{
         position: absolute;

@@ -55,6 +55,9 @@ body .head-section .navbar .navbar-brand .icon {
   color: red;
   font-size: 1.2em;
 }
+body .head-section .navbar #burger {
+  display: none;
+}
 body .head-section .navbar .burger {
   position: relative;
   top: 0.15rem;
@@ -79,7 +82,7 @@ body .head-section .navbar .hamburger-menu {
   z-index: 1000;
   position: fixed;
   top: 0;
-  right: 0;
+  left: -100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,10 +95,14 @@ body .head-section .navbar .hamburger-menu {
   text-align: center;
   padding: 0;
   margin: 0;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
 }
 body .head-section .navbar .hamburger-menu ul {
   padding: 0;
   margin: 0;
+  -webkit-transition: top 0.65s;
+  transition: top 0.65s;
 }
 body .head-section .navbar .hamburger-menu ul a {
   text-decoration: none;
@@ -125,6 +132,20 @@ body .head-section .navbar .hamburger-menu ul a li {
 body .head-section .navbar .hamburger-menu ul a li:hover {
   background: #252525;
 }
+@media (max-height: 400px) {
+  body .head-section .navbar .hamburger-menu ul {
+    position: relative;
+    top: -1rem;
+  }
+  body .head-section .navbar .hamburger-menu ul a {
+    font-size: 2.5em;
+  }
+}
+@media (max-height: 400px) and (max-height: 320px) {
+  body .head-section .navbar .hamburger-menu ul a {
+    font-size: 2em;
+  }
+}
 body .head-section .navbar .hamburger-menu .social {
   cursor: default;
   bottom: 0;
@@ -143,6 +164,14 @@ body .head-section .navbar .hamburger-menu .social {
       -ms-flex-align: center;
           align-items: center;
   font-size: 2em;
+  -webkit-transition: height 0.65s;
+  transition: height 0.65s;
+}
+@media (max-height: 320px) {
+  body .head-section .navbar .hamburger-menu .social {
+    height: 3rem;
+    font-size: 1.75em;
+  }
 }
 body .head-section .head-section-content {
   display: -webkit-box;
@@ -162,6 +191,8 @@ body .head-section .head-section-content .box-container {
   position: relative;
   top: -1rem;
   display: flexbox;
+  -webkit-transition: top 0.65s;
+  transition: top 0.65s;
 }
 body .head-section .head-section-content .box-container .my-image {
   display: -webkit-box;
@@ -174,6 +205,8 @@ body .head-section .head-section-content .box-container .my-image {
   max-width: 425px;
   height: auto;
   width: auto;
+  -webkit-transition: max-height 0.65s, max-width 0.65s;
+  transition: max-height 0.65s, max-width 0.65s;
 }
 body .head-section .head-section-content .box-container .my-image .my-image-img {
   height: 95%;
@@ -195,4 +228,47 @@ body .head-section .head-section-content .box-container .text {
 body .head-section .head-section-content .box-container .text span {
   position: relative;
   top: -1.5rem;
+}
+@media (max-height: 690px) {
+  body .head-section .head-section-content .box-container {
+    top: 5rem;
+  }
+}
+@media (max-height: 690px) and (max-height: 590px) {
+  body .head-section .head-section-content .box-container {
+    top: 3rem;
+  }
+  body .head-section .head-section-content .box-container .my-image {
+    max-height: 400px;
+    max-width: 350px;
+  }
+}
+@media (max-height: 690px) and (max-height: 500px) {
+  body .head-section .head-section-content .box-container {
+    top: 2.5rem;
+  }
+  body .head-section .head-section-content .box-container .my-image {
+    max-height: 300px;
+    max-width: 250px;
+  }
+  body .head-section .head-section-content .box-container .text {
+    font-size: 2.2em;
+  }
+}
+@media (max-height: 690px) and (max-height: 400px) {
+  body .head-section .head-section-content .box-container .my-image {
+    max-height: 200px;
+    max-width: 175px;
+  }
+  body .head-section .head-section-content .box-container .text {
+    font-size: 2em;
+  }
+}
+@media (max-height: 690px) and (max-height: 320px) {
+  body .head-section .head-section-content .box-container {
+    top: 2rem;
+  }
+  body .head-section .head-section-content .box-container .text {
+    display: none;
+  }
 }/*# sourceMappingURL=Home.css.map */

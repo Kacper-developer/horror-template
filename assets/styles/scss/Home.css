@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 @import url("https://fonts.cdnfonts.com/css/october-crow?styles=18073");
 @import url("https://fonts.cdnfonts.com/css/bloodlust?styles=85048");
+@import url("http://fonts.cdnfonts.com/css/linux-libertine-o?styles=30056");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8,9 +9,10 @@
 }
 
 /*
-    CHANGES for tablet view | head-section
-     - change size of .box-container
-     - add social links to mobile view and tablet view
+    CHANGE
+     - change view of .box-container on phone
+     - change view of .box-container on tablet
+     - add line to social links 
 */
 body {
   height: 100vh;
@@ -172,6 +174,37 @@ body .head-section .navbar .hamburger-menu .social {
   -webkit-transition: height 0.65s;
   transition: height 0.65s;
 }
+body .head-section .navbar .hamburger-menu .social ul {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .head-section .navbar .hamburger-menu .social ul li {
+  margin-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+body .head-section .navbar .hamburger-menu .social ul li a {
+  position: relative;
+  top: 0.8rem;
+  font-size: 1.5em;
+}
 @media (max-height: 320px) {
   body .head-section .navbar .hamburger-menu .social {
     height: 3rem;
@@ -277,7 +310,7 @@ body .head-section .head-section-content .box-container .my-image .my-image-img 
 }
 body .head-section .head-section-content .box-container .text {
   color: #e61919;
-  font-family: "Bloodlust";
+  font-family: "Linux Libertine O";
   font-size: clamp(2.5em, 10vw, 3.5em);
   position: relative;
   top: 1rem;
@@ -287,6 +320,51 @@ body .head-section .head-section-content .box-container .text {
 body .head-section .head-section-content .box-container .text span {
   position: relative;
   top: clamp(-1.5rem, 10vw, -3rem);
+}
+body .head-section .head-section-content .social-links {
+  position: absolute;
+  left: 2rem;
+  bottom: 1rem;
+  color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body .head-section .head-section-content .social-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .head-section .head-section-content .social-links ul li {
+  margin-right: 2rem;
+}
+body .head-section .head-section-content .social-links ul li a {
+  font-size: 3em;
+  color: red;
+}
+@media (max-width: 768px) {
+  body .head-section .head-section-content .social-links {
+    display: none;
+  }
+}
+@media (min-width: 767px) {
+  body .head-section .head-section-content .social-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 @media (max-height: 690px) {
   body .head-section .head-section-content .box-container {

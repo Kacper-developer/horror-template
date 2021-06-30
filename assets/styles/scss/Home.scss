@@ -11,11 +11,13 @@ $blueWhite: #edf2f4;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/october-crow?styles=18073');
 @import url('https://fonts.cdnfonts.com/css/bloodlust?styles=85048');
+@import url('http://fonts.cdnfonts.com/css/linux-libertine-o?styles=30056');
 
 $lato: 'Lato';
 $montserrat: 'Montserrat';
 $octobercrow: 'October Crow';
 $bloodlust: 'Bloodlust';
+$linuxlibertineo: 'Linux Libertine O';
 
 
 *{
@@ -24,9 +26,10 @@ $bloodlust: 'Bloodlust';
 }
 
 /*
-    CHANGES for tablet view | head-section
-     - change size of .box-container
-     - add social links to mobile view and tablet view
+    CHANGE
+     - change view of .box-container on phone
+     - change view of .box-container on tablet
+     - add line to social links 
 */
 
 body{
@@ -212,6 +215,28 @@ body{
             font-size: 2em;
 
             transition: height .65s;
+
+            ul{
+              height: 100%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              li{
+                margin-right: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+
+                a{
+                  position: relative;
+                  top: .8rem;
+                  font-size: 1.5em;
+                }
+              }
+            }
           }
 
           @media (max-height: 320px) {
@@ -309,7 +334,7 @@ body{
           .text{
             color: #e61919;
   
-            font-family: $bloodlust;
+            font-family: $linuxlibertineo;
             font-size: clamp(2.5em, 10vw, 3.5em);
   
             position: relative;
@@ -323,6 +348,38 @@ body{
               top: clamp(-1.5rem, 10vw, -3rem);
             }
           }
+        }
+
+        .social-links{
+          position: absolute;
+          left: 2rem;
+          bottom: 1rem;
+          color: red;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            li{
+              margin-right: 2rem;
+              a{
+                font-size: 3em;
+                color: red;
+              }
+            }
+          }
+        } 
+
+        @media (max-width: $tablet) {
+          .social-links{display: none;}
+        }
+
+        @media (min-width: 767px) {
+          .social-links{display: flex;}
         }
 
         @media (max-height: 690px) {

@@ -9,11 +9,8 @@
 
 /*
     CHANGES for tablet view | head-section
-     - .box-container, display
-     - .box-container - text, font-size and add after or just add new object to html and cutomize it in scss
-     - disable hamburger and make normal navigation links
-     - add some white space
-     - maybe change background 
+     - change size of .box-container
+     - add social links to mobile view and tablet view
 */
 body {
   height: 100vh;
@@ -38,7 +35,7 @@ body .head-section .navbar {
   position: absolute;
   top: 0;
   width: 100vw;
-  height: 5rem;
+  height: auto;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,38 +46,38 @@ body .head-section .navbar .navbar-brand {
   cursor: pointer;
   font-family: "October Crow";
   font-weight: 900;
-  font-size: 1.5em;
+  font-size: clamp(1.5em, 5vw, 3em);
   letter-spacing: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: red;
-}
-body .head-section .navbar .navbar-brand .icon {
-  color: red;
-  font-size: 1.2em;
+  margin-left: 4%;
+  margin-top: 0.5rem;
 }
 body .head-section .navbar #burger {
   display: none;
 }
 body .head-section .navbar .burger {
-  position: relative;
-  top: 0.5rem;
-  right: 5%;
+  margin-top: clamp(1rem, 5vw, 2%);
+  margin-right: 4%;
   margin-left: auto;
   display: block;
-  width: 25px;
+  width: clamp(25px, 10vw, 30px);
   cursor: pointer;
   z-index: 1001;
 }
 body .head-section .navbar .burger .slash {
   border-radius: 365px;
-  margin-bottom: 0.3rem;
+  margin-bottom: clamp(.3rem, 5vw, .4rem);
   width: 100%;
-  height: 3px;
+  height: clamp(3px, 5vw, 4px);
   background: red;
 }
 body .head-section .navbar .hamburger-menu {
@@ -181,6 +178,59 @@ body .head-section .navbar .hamburger-menu .social {
     font-size: 1.75em;
   }
 }
+@media (min-width: 768px) {
+  body .head-section .navbar .burger, body .head-section .navbar .hamburger-menu {
+    display: none;
+  }
+}
+body .head-section .navbar .navbar-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0.25rem;
+  margin-top: -0.5rem;
+}
+body .head-section .navbar .navbar-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .head-section .navbar .navbar-links ul li {
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .head-section .navbar .navbar-links ul li a {
+  position: relative;
+  top: 1rem;
+  font-family: "Bloodlust";
+  color: red;
+  font-size: clamp(2em, 4vw, 2.8em);
+}
+@media (max-width: 767px) {
+  body .head-section .navbar .navbar-links {
+    display: none;
+  }
+}
 body .head-section .head-section-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -228,7 +278,7 @@ body .head-section .head-section-content .box-container .my-image .my-image-img 
 body .head-section .head-section-content .box-container .text {
   color: #e61919;
   font-family: "Bloodlust";
-  font-size: 2.5em;
+  font-size: clamp(2.5em, 10vw, 3.5em);
   position: relative;
   top: 1rem;
   left: -1rem;
@@ -236,7 +286,7 @@ body .head-section .head-section-content .box-container .text {
 }
 body .head-section .head-section-content .box-container .text span {
   position: relative;
-  top: -1.5rem;
+  top: clamp(-1.5rem, 10vw, -3rem);
 }
 @media (max-height: 690px) {
   body .head-section .head-section-content .box-container {
@@ -279,5 +329,33 @@ body .head-section .head-section-content .box-container .text span {
   }
   body .head-section .head-section-content .box-container .text {
     display: none;
+  }
+}
+@media (min-width: 768px) {
+  body .head-section .head-section-content .box-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .head-section .head-section-content .box-container .my-image {
+    position: relative;
+    left: 3rem;
+  }
+  body .head-section .head-section-content .box-container .text {
+    font-size: 3.5em;
+    top: 8rem;
+  }
+  body .head-section .head-section-content .box-container .text::after {
+    content: "";
+    background: red;
+    color: red;
+    height: 60px;
+    width: 2px;
+    padding-left: 0.2rem;
+    padding-bottom: 12rem;
+    padding-top: 10rem;
+    position: relative;
+    top: -3rem;
+    left: 5rem;
   }
 }/*# sourceMappingURL=Home.css.map */

@@ -25,11 +25,9 @@ $linuxlibertineo: 'Linux Libertine O';
     scroll-behavior: smooth;
 }
 
+
 /*
-    CHANGE
-     - change view of .box-container on phone
-     - change view of .box-container on tablet
-     - add line to social links 
+    MAKE NEW SECTION
 */
 
 body{
@@ -55,7 +53,6 @@ body{
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      //background-image: linear-gradient(180deg, hsl(193, 9%, 19%) 0%, hsl(0, 0%, 0%) 74%);
 
       .navbar{
         position: absolute;
@@ -76,7 +73,6 @@ body{
           font-family: $octobercrow;
           font-weight: 900;
           font-size: clamp(1.5em, 5vw, 3em);
-          //font-size: 1.5em;
           letter-spacing: 2px;
 
           display: flex;
@@ -149,8 +145,8 @@ body{
             text-decoration: none;
 
             color: red;
-            font-family: $bloodlust;
-            font-size: 3em;
+            font-family: $linuxlibertineo;
+            font-size: 2.7em;
 
             margin: 0;
             padding: 0;
@@ -177,25 +173,6 @@ body{
 
           }
 
-          @media (max-height: 400px) {
-            ul{
-              position: relative;
-              top: -1rem;
-
-              a{
-                font-size: 2.5em;
-              }
-            }
-
-            @media (max-height: 320px) {
-              ul{
-                a{
-                  font-size: 2em;
-                }
-              }
-            }
-          }
-
           .social{
             cursor: default;
 
@@ -219,32 +196,61 @@ body{
             ul{
               height: 100%;
               width: 100%;
+
               display: flex;
               justify-content: center;
               align-items: center;
 
+              margin-left: .5rem;
+
               li{
                 margin-right: 2rem;
+
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 height: 100%;
 
                 a{
                   position: relative;
-                  top: .8rem;
+                  top: .2rem;
+
                   font-size: 1.5em;
                 }
               }
             }
           }
 
-          @media (max-height: 320px) {
+          @media (max-height: 400px) {
+            ul{
+              position: relative;
+              top: -1rem;
+
+              a{
+                font-size: 2.5em;
+              }
+            }
+
+            .social{
+              ul li a{
+                top: 1.3rem;
+              }
+            }
+
+            @media (max-height: 320px) {
+              ul{
+                a{
+                  font-size: 2em;
+                }
+              }
+
               .social{
                 height: 3rem;
 
                 font-size: 1.75em;
               }
+            }
           }
   
         }
@@ -276,12 +282,19 @@ body{
               a{
                 position: relative;
                 top: 1rem;
+
                 font-family: $bloodlust;
+
                 color: red;
+
                 font-size: clamp(2em, 4vw, 2.8em);
               }
             }
           }
+        }
+
+        @media (min-width: $desktop) {
+          .navbar-links{margin-right: 4%;}
         }
 
         @media (max-width: 767px) {
@@ -326,7 +339,6 @@ body{
               position: relative;
               left: -.5rem;
   
-              -webkit-filter: invert(40%) grayscale(0%) brightness(100%) sepia(100%) hue-rotate(-50deg) saturate(3500%) contrast(2);
               filter: grayscale(0%) brightness(100%) sepia(100%) hue-rotate(-50deg) saturate(3500%) contrast(0.8);
             }
           }
@@ -335,7 +347,7 @@ body{
             color: #e61919;
   
             font-family: $linuxlibertineo;
-            font-size: clamp(2.5em, 10vw, 3.5em);
+            font-size: clamp(2em, 10vw, 2.5em);
   
             position: relative;
             top: 1rem;
@@ -345,16 +357,34 @@ body{
   
             span{
               position: relative;
-              top: clamp(-1.5rem, 10vw, -3rem);
+              top: clamp(-1rem, 10vw, -3rem);
             }
+          }
+
+          @media (min-width: $desktop) {
+            .my-image{
+              margin-left: 1.5rem;
+
+              max-height: 525px;
+              max-width: 475px;
+            }
+          }
+        }
+
+        @media (max-height: 800px) {
+          .box-container{
+            position: relative;
+            top: 1rem;
           }
         }
 
         .social-links{
           position: absolute;
-          left: 2rem;
-          bottom: 1rem;
+          left: 4%;
+          bottom: 2%;
+
           color: red;
+
           display: flex;
           align-items: center;
           justify-content: center;
@@ -368,9 +398,11 @@ body{
               margin-right: 2rem;
               a{
                 font-size: 3em;
+
                 color: red;
               }
             }
+
           }
         } 
 
@@ -383,41 +415,60 @@ body{
         }
 
         @media (max-height: 690px) {
-          .box-container{top: 5rem;}
+          .box-container{top: 1.5rem;}
+
+          @media (max-height: 650px) {
+            .box-container{ 
+              .my-image{
+                max-height: 475px;
+                max-width: 425px;
+              }
+          }
+          }
 
           @media (max-height: 590px) {
             .box-container{
-              top: 3rem;
+              top: 1.5rem;
               
               .my-image{
               max-height: 400px;
               max-width: 350px;
+              }
+
+              .text{
+                font-size: 2em;
               }
           }
           }
 
           @media (max-height: 500px) {
             .box-container{
-              top: 2.5rem;
+              top: 2rem;
               
               .my-image{
               max-height: 300px;
               max-width: 250px;
               }
 
-              .text{font-size: 2.2em;}
+              .text{font-size: 2em;}
           }
           }
 
-          @media (max-height: 400px) {
+          @media (max-height: 410px) {
             .box-container{
+              top: 1.5rem;
 
               .my-image{
                 max-height: 200px;
                 max-width: 175px;
+
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
               }
 
-              .text{font-size: 2em;}
+              .text{font-size: 1.5em;}
+              .text span{top: -.7rem;}
             }
           }
 
@@ -437,26 +488,58 @@ body{
 
             .my-image{
               position: relative;
-              left: 3rem;
+              left: 2rem;
             }
 
             .text{
-              font-size: 3.5em;
-              top: 8rem;
+              font-size: 3em;
+              top: 9rem;
+              left: 1rem;
             }
 
-            .text::after{
-              content: '';
-              background: red;
-              color: red;
-              height: 60px;
-              width: 2px;
-              padding-left: .2rem;
-              padding-bottom: 12rem;
-              padding-top: 10rem;
-              position: relative;
-              top: -3rem;
-              left: 5rem;
+          }
+        }
+
+        @media (min-width: $desktop) {
+          .box-container{
+            .text{
+              top: 9.5rem;
+              font-size: clamp(3em, 10vw, 3.75em);
+            }
+          }
+
+          @media (max-height: 650px) {
+            .box-container{
+              .text{
+                top: 8rem;
+                font-size: 3.5em;
+              }
+            }
+
+            @media (max-height: 600px) {
+              .box-container{
+                .text{
+                  top: 6rem;
+                  font-size: 3em;
+                }
+              }
+
+              @media (max-height: 500px) {
+                .box-container{
+                  .text{
+                    top: 4rem;
+                    font-size: 2.5em;
+                  }
+                }
+
+                @media (max-height: 410px) {
+                  .box-container{
+                    .text{
+                      top: 1em;
+                    }
+                  }
+                }
+              }
             }
           }
         }

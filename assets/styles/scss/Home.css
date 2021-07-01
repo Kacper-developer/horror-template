@@ -9,10 +9,7 @@
 }
 
 /*
-    CHANGE
-     - change view of .box-container on phone
-     - change view of .box-container on tablet
-     - add line to social links 
+    MAKE NEW SECTION
 */
 body {
   height: 100vh;
@@ -114,8 +111,8 @@ body .head-section .navbar .hamburger-menu ul {
 body .head-section .navbar .hamburger-menu ul a {
   text-decoration: none;
   color: red;
-  font-family: "Bloodlust";
-  font-size: 3em;
+  font-family: "Linux Libertine O";
+  font-size: 2.7em;
   margin: 0;
   padding: 0;
 }
@@ -138,20 +135,6 @@ body .head-section .navbar .hamburger-menu ul a li {
 }
 body .head-section .navbar .hamburger-menu ul a li:hover {
   background: #252525;
-}
-@media (max-height: 400px) {
-  body .head-section .navbar .hamburger-menu ul {
-    position: relative;
-    top: -1rem;
-  }
-  body .head-section .navbar .hamburger-menu ul a {
-    font-size: 2.5em;
-  }
-}
-@media (max-height: 400px) and (max-height: 320px) {
-  body .head-section .navbar .hamburger-menu ul a {
-    font-size: 2em;
-  }
 }
 body .head-section .navbar .hamburger-menu .social {
   cursor: default;
@@ -186,6 +169,7 @@ body .head-section .navbar .hamburger-menu .social ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 0.5rem;
 }
 body .head-section .navbar .hamburger-menu .social ul li {
   margin-right: 2rem;
@@ -202,10 +186,25 @@ body .head-section .navbar .hamburger-menu .social ul li {
 }
 body .head-section .navbar .hamburger-menu .social ul li a {
   position: relative;
-  top: 0.8rem;
+  top: 0.2rem;
   font-size: 1.5em;
 }
-@media (max-height: 320px) {
+@media (max-height: 400px) {
+  body .head-section .navbar .hamburger-menu ul {
+    position: relative;
+    top: -1rem;
+  }
+  body .head-section .navbar .hamburger-menu ul a {
+    font-size: 2.5em;
+  }
+  body .head-section .navbar .hamburger-menu .social ul li a {
+    top: 1.3rem;
+  }
+}
+@media (max-height: 400px) and (max-height: 320px) {
+  body .head-section .navbar .hamburger-menu ul a {
+    font-size: 2em;
+  }
   body .head-section .navbar .hamburger-menu .social {
     height: 3rem;
     font-size: 1.75em;
@@ -259,6 +258,11 @@ body .head-section .navbar .navbar-links ul li a {
   color: red;
   font-size: clamp(2em, 4vw, 2.8em);
 }
+@media (min-width: 1024px) {
+  body .head-section .navbar .navbar-links {
+    margin-right: 4%;
+  }
+}
 @media (max-width: 767px) {
   body .head-section .navbar .navbar-links {
     display: none;
@@ -305,13 +309,13 @@ body .head-section .head-section-content .box-container .my-image .my-image-img 
   width: 95%;
   position: relative;
   left: -0.5rem;
-  -webkit-filter: invert(40%) grayscale(0%) brightness(100%) sepia(100%) hue-rotate(-50deg) saturate(3500%) contrast(2);
-  filter: grayscale(0%) brightness(100%) sepia(100%) hue-rotate(-50deg) saturate(3500%) contrast(0.8);
+  -webkit-filter: grayscale(0%) brightness(100%) sepia(100%) hue-rotate(-50deg) saturate(3500%) contrast(0.8);
+          filter: grayscale(0%) brightness(100%) sepia(100%) hue-rotate(-50deg) saturate(3500%) contrast(0.8);
 }
 body .head-section .head-section-content .box-container .text {
   color: #e61919;
   font-family: "Linux Libertine O";
-  font-size: clamp(2.5em, 10vw, 3.5em);
+  font-size: clamp(2em, 10vw, 2.5em);
   position: relative;
   top: 1rem;
   left: -1rem;
@@ -319,12 +323,25 @@ body .head-section .head-section-content .box-container .text {
 }
 body .head-section .head-section-content .box-container .text span {
   position: relative;
-  top: clamp(-1.5rem, 10vw, -3rem);
+  top: clamp(-1rem, 10vw, -3rem);
+}
+@media (min-width: 1024px) {
+  body .head-section .head-section-content .box-container .my-image {
+    margin-left: 1.5rem;
+    max-height: 525px;
+    max-width: 475px;
+  }
+}
+@media (max-height: 800px) {
+  body .head-section .head-section-content .box-container {
+    position: relative;
+    top: 1rem;
+  }
 }
 body .head-section .head-section-content .social-links {
   position: absolute;
-  left: 2rem;
-  bottom: 1rem;
+  left: 4%;
+  bottom: 2%;
   color: red;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -368,37 +385,57 @@ body .head-section .head-section-content .social-links ul li a {
 }
 @media (max-height: 690px) {
   body .head-section .head-section-content .box-container {
-    top: 5rem;
+    top: 1.5rem;
+  }
+}
+@media (max-height: 690px) and (max-height: 650px) {
+  body .head-section .head-section-content .box-container .my-image {
+    max-height: 475px;
+    max-width: 425px;
   }
 }
 @media (max-height: 690px) and (max-height: 590px) {
   body .head-section .head-section-content .box-container {
-    top: 3rem;
+    top: 1.5rem;
   }
   body .head-section .head-section-content .box-container .my-image {
     max-height: 400px;
     max-width: 350px;
   }
+  body .head-section .head-section-content .box-container .text {
+    font-size: 2em;
+  }
 }
 @media (max-height: 690px) and (max-height: 500px) {
   body .head-section .head-section-content .box-container {
-    top: 2.5rem;
+    top: 2rem;
   }
   body .head-section .head-section-content .box-container .my-image {
     max-height: 300px;
     max-width: 250px;
   }
   body .head-section .head-section-content .box-container .text {
-    font-size: 2.2em;
+    font-size: 2em;
   }
 }
-@media (max-height: 690px) and (max-height: 400px) {
+@media (max-height: 690px) and (max-height: 410px) {
+  body .head-section .head-section-content .box-container {
+    top: 1.5rem;
+  }
   body .head-section .head-section-content .box-container .my-image {
     max-height: 200px;
     max-width: 175px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
   }
   body .head-section .head-section-content .box-container .text {
-    font-size: 2em;
+    font-size: 1.5em;
+  }
+  body .head-section .head-section-content .box-container .text span {
+    top: -0.7rem;
   }
 }
 @media (max-height: 690px) and (max-height: 320px) {
@@ -417,23 +454,40 @@ body .head-section .head-section-content .social-links ul li a {
   }
   body .head-section .head-section-content .box-container .my-image {
     position: relative;
-    left: 3rem;
+    left: 2rem;
   }
   body .head-section .head-section-content .box-container .text {
-    font-size: 3.5em;
-    top: 8rem;
+    font-size: 3em;
+    top: 9rem;
+    left: 1rem;
   }
-  body .head-section .head-section-content .box-container .text::after {
-    content: "";
-    background: red;
-    color: red;
-    height: 60px;
-    width: 2px;
-    padding-left: 0.2rem;
-    padding-bottom: 12rem;
-    padding-top: 10rem;
-    position: relative;
-    top: -3rem;
-    left: 5rem;
+}
+@media (min-width: 1024px) {
+  body .head-section .head-section-content .box-container .text {
+    top: 9.5rem;
+    font-size: clamp(3em, 10vw, 3.75em);
+  }
+}
+@media (min-width: 1024px) and (max-height: 650px) {
+  body .head-section .head-section-content .box-container .text {
+    top: 8rem;
+    font-size: 3.5em;
+  }
+}
+@media (min-width: 1024px) and (max-height: 650px) and (max-height: 600px) {
+  body .head-section .head-section-content .box-container .text {
+    top: 6rem;
+    font-size: 3em;
+  }
+}
+@media (min-width: 1024px) and (max-height: 650px) and (max-height: 600px) and (max-height: 500px) {
+  body .head-section .head-section-content .box-container .text {
+    top: 4rem;
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 1024px) and (max-height: 650px) and (max-height: 600px) and (max-height: 500px) and (max-height: 410px) {
+  body .head-section .head-section-content .box-container .text {
+    top: 1em;
   }
 }/*# sourceMappingURL=Home.css.map */

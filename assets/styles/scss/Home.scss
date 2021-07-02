@@ -27,14 +27,15 @@ $linuxlibertineo: 'Linux Libertine O';
 
 
 /*
-    MAKE NEW SECTION
+    TO DO:
+    - repair .box-container text view on tablet
 */
 
 body{
     height: 100vh;
     width: 100vw;
 
-    background: hsl(193, 9%, 19%);
+    background: #000;
 
     display: flexbox;
 
@@ -55,8 +56,7 @@ body{
       background-repeat: no-repeat;
 
       .navbar{
-        position: absolute;
-        top: 0;
+        position: relative;
 
         width: 100vw;
         height: auto;
@@ -311,6 +311,9 @@ body{
         width: 100vw;
 
         overflow: hidden;
+
+        position: relative;
+        top: -5rem;
   
         .box-container{
           position: relative;
@@ -381,7 +384,7 @@ body{
         .social-links{
           position: absolute;
           left: 4%;
-          bottom: 2%;
+          bottom: 4%;
 
           color: red;
 
@@ -546,4 +549,111 @@ body{
       }
     } 
 
+    .body-sections{
+      height: auto;
+      width: 100vw;
+      display: flexbox;
+      background-color: #000;
+
+      .blog_slider-section{
+        margin-top: 10rem;
+        height: 35rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .splide{
+          width: 80%;
+          max-width: 1536px;
+          .splide__arrows{
+            position: relative;
+            top: 13rem;
+            .splide__arrow{
+              .arrow-icon{
+                color: red;
+                font-size: 40px;
+              }
+              .arrow-icon-first{
+                position: relative;
+                right: 4rem;
+              }
+              .arrow-icon-last{
+                margin-left: 8rem;
+              }
+            }
+          }
+          @media (max-width: 768px) {
+            .splide__arrows{
+              display: none;
+            }
+          }
+          .splide__track{
+            .splide__list{
+              .splide__slide{
+                border: 5px solid red;
+                height: 400px !important;
+                min-width: 300px !important;
+              }
+
+              // 1330 & 1220 & 768 | disable slider buttons
+
+              @media (max-width: 1330px) {
+                .splide__slide{
+                  height: 300px !important;
+                  min-width: 250px !important;
+                }
+
+                @media (max-width: 768px) {
+                  .splide__slide{
+                    height: 250px !important;
+                    min-width: 0px !important;
+                    width: 200px !important;
+                  }
+                }
+              }
+            }
+          }
+          div .splide__pagination{
+            z-index: 100;
+
+            .splide__pagination__page{
+              background: red;
+              position: relative;
+              top: .05rem;
+              width: 30px;
+              height: 7px;
+            }
+          }
+        }
+        @media (max-width: 1220px) {
+          .splide{
+            width: 60%;
+            min-width: 732px;
+          }
+
+          @media (max-width: 768px) {
+            .splide{
+              width: 100%;
+              max-width: 300px;
+            }
+          }
+        }
+      }
+      @media (max-width: 768px) {
+        .blog_slider-section{
+          margin-top: 2rem;
+          height: 30rem;
+        }
+
+        @media (max-width: 400px) {
+          .blog_slider-section{
+            height: 26rem;
+          }
+        }
+      }
+    }
+
+
 }
+
+

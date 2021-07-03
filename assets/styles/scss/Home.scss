@@ -28,7 +28,8 @@ $linuxlibertineo: 'Linux Libertine O';
 
 /*
     TO DO:
-    - repair .box-container text view on tablet
+    - make new section
+    - repair pagination
 */
 
 body{
@@ -501,6 +502,30 @@ body{
             }
 
           }
+
+          @media (max-height: 590px) {
+            .box-container{
+              .text{
+                top: 5rem;
+              }
+            }
+
+            @media (max-height: 490px) {
+              .box-container{
+                .text{
+                  top: 4rem;
+                }
+              }
+            }
+
+            @media (max-height: 410px) {
+              .box-container{
+                .text{
+                  top: 1.5rem;
+                }
+              }
+            }
+          }
         }
 
         @media (min-width: $desktop) {
@@ -552,23 +577,29 @@ body{
     .body-sections{
       height: auto;
       width: 100vw;
+
       display: flexbox;
       background-color: #000;
 
       .blog_slider-section{
         margin-top: 10rem;
+
         height: 35rem;
         width: 100%;
+
         display: flex;
         justify-content: center;
 
         .splide{
           width: 80%;
           max-width: 1536px;
+
           .splide__arrows{
             position: relative;
             top: 13rem;
+
             .splide__arrow{
+
               .arrow-icon{
                 color: red;
                 font-size: 40px;
@@ -580,22 +611,30 @@ body{
               .arrow-icon-last{
                 margin-left: 8rem;
               }
+
             }
           }
-          @media (max-width: 768px) {
+          @media (max-width: 1330px) {
             .splide__arrows{
-              display: none;
+              top: 9.5rem;
+            }
+
+            @media (max-width: 768px) {
+              .splide__arrows{
+                display: none;
+              }
             }
           }
           .splide__track{
+
             .splide__list{
+
               .splide__slide{
                 border: 5px solid red;
+
                 height: 400px !important;
                 min-width: 300px !important;
               }
-
-              // 1330 & 1220 & 768 | disable slider buttons
 
               @media (max-width: 1330px) {
                 .splide__slide{
@@ -611,15 +650,19 @@ body{
                   }
                 }
               }
+
             }
+
           }
           div .splide__pagination{
             z-index: 100;
 
             .splide__pagination__page{
               background: red;
+
               position: relative;
-              top: .05rem;
+              top: .08rem;
+
               width: 30px;
               height: 7px;
             }
@@ -639,15 +682,22 @@ body{
           }
         }
       }
-      @media (max-width: 768px) {
+      @media (max-width: 1220px) {
         .blog_slider-section{
-          margin-top: 2rem;
           height: 30rem;
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 768px) {
           .blog_slider-section{
-            height: 26rem;
+            margin-top: 2rem;
+
+            height: 25rem;
+          }
+  
+          @media (max-width: 400px) {
+            .blog_slider-section{
+              height: 26rem;
+            }
           }
         }
       }

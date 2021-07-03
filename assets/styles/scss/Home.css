@@ -10,7 +10,8 @@
 
 /*
     TO DO:
-    - repair .box-container text view on tablet
+    - make new section
+    - repair pagination
 */
 body {
   height: 100vh;
@@ -464,6 +465,21 @@ body .head-section .head-section-content .social-links ul li a {
     left: 1rem;
   }
 }
+@media (min-width: 768px) and (max-height: 590px) {
+  body .head-section .head-section-content .box-container .text {
+    top: 5rem;
+  }
+}
+@media (min-width: 768px) and (max-height: 590px) and (max-height: 490px) {
+  body .head-section .head-section-content .box-container .text {
+    top: 4rem;
+  }
+}
+@media (min-width: 768px) and (max-height: 590px) and (max-height: 410px) {
+  body .head-section .head-section-content .box-container .text {
+    top: 1.5rem;
+  }
+}
 @media (min-width: 1024px) {
   body .head-section .head-section-content .box-container .text {
     top: 9.5rem;
@@ -529,7 +545,12 @@ body .body-sections .blog_slider-section .splide .splide__arrows .splide__arrow 
 body .body-sections .blog_slider-section .splide .splide__arrows .splide__arrow .arrow-icon-last {
   margin-left: 8rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1330px) {
+  body .body-sections .blog_slider-section .splide .splide__arrows {
+    top: 9.5rem;
+  }
+}
+@media (max-width: 1330px) and (max-width: 768px) {
   body .body-sections .blog_slider-section .splide .splide__arrows {
     display: none;
   }
@@ -558,7 +579,7 @@ body .body-sections .blog_slider-section .splide div .splide__pagination {
 body .body-sections .blog_slider-section .splide div .splide__pagination .splide__pagination__page {
   background: red;
   position: relative;
-  top: 0.05rem;
+  top: 0.08rem;
   width: 30px;
   height: 7px;
 }
@@ -574,13 +595,18 @@ body .body-sections .blog_slider-section .splide div .splide__pagination .splide
     max-width: 300px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1220px) {
   body .body-sections .blog_slider-section {
-    margin-top: 2rem;
     height: 30rem;
   }
 }
-@media (max-width: 768px) and (max-width: 400px) {
+@media (max-width: 1220px) and (max-width: 768px) {
+  body .body-sections .blog_slider-section {
+    margin-top: 2rem;
+    height: 25rem;
+  }
+}
+@media (max-width: 1220px) and (max-width: 768px) and (max-width: 400px) {
   body .body-sections .blog_slider-section {
     height: 26rem;
   }

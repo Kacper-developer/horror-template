@@ -579,7 +579,7 @@ body .body-sections .blog_slider-section .splide div .splide__pagination {
 body .body-sections .blog_slider-section .splide div .splide__pagination .splide__pagination__page {
   background: red;
   position: relative;
-  top: 0.08rem;
+  top: 0.07rem;
   width: 30px;
   height: 7px;
 }

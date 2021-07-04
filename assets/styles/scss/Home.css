@@ -686,15 +686,16 @@ body .body-sections .blog_proceed-section .second-section .btn-container .btn {
   width: 12rem;
   border-radius: 5px;
   color: #700b0b;
-  text-transform: uppercase;
-  font-size: 3em;
-  font-family: "Bloodlust";
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
   z-index: 1;
   border: none;
+}
+body .body-sections .blog_proceed-section .second-section .btn-container .btn p {
+  font-size: 3em;
+  font-family: "Bloodlust";
 }
 body .body-sections .blog_proceed-section .second-section .btn-container .btn:after {
   content: "";

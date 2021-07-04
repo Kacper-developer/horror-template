@@ -12,13 +12,16 @@ $blueWhite: #edf2f4;
 @import url('https://fonts.cdnfonts.com/css/october-crow?styles=18073');
 @import url('https://fonts.cdnfonts.com/css/bloodlust?styles=85048');
 @import url('https://fonts.cdnfonts.com/css/linux-libertine-o?styles=30056');
+@import url('https://fonts.cdnfonts.com/css/requiem-ii?styles=41639');
 
 $lato: 'Lato';
 $montserrat: 'Montserrat';
 $octobercrow: 'October Crow';
 $bloodlust: 'Bloodlust';
 $linuxlibertineo: 'Linux Libertine O';
-
+$reqiem: 'Requiem II', sans-serif;
+$metalmania: 'Metal Mania', cursive;
+                
 
 *{
     box-sizing: border-box;
@@ -28,7 +31,10 @@ $linuxlibertineo: 'Linux Libertine O';
 
 /*
     TO DO:
-    - make new section responsive
+    - add some changes to navbar ( maybe change the font of navabar links )
+    - find photos for about section
+    - find good design for about section
+    - make new section
 */
 
 body{
@@ -265,7 +271,7 @@ body{
           align-items: center;
 
           margin-right: .25rem;
-          margin-top: -.5rem;
+          margin-top: -1rem;
 
           ul{
             display: flex;
@@ -283,7 +289,7 @@ body{
                 position: relative;
                 top: 1rem;
 
-                font-family: $bloodlust;
+                font-family: $reqiem;
 
                 color: red;
 
@@ -535,6 +541,16 @@ body{
             }
           }
 
+          .social-links{
+            ul li{
+              margin-right: 2.5rem;
+
+              a{
+                font-size: 3.5em;
+              }
+            }
+          }
+
           @media (max-height: 650px) {
             .box-container{
               .text{
@@ -765,10 +781,8 @@ body{
                 border: none;
 
                 p{
-                  font-size: 3em;
-                  font-family: $bloodlust;
-                  position: relative;
-                  top: -.5rem;
+                  font-size: 2em;
+                  font-family: $metalmania;
                 }
 
                 &:after {

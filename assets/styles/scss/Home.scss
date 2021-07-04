@@ -842,6 +842,13 @@ body{
             }
             .second-section{
               margin-left: auto;
+
+              .btn-container{
+                .btn p{
+                  position: relative;
+                  top: -.5rem;
+                }
+              }
             }
             .first-section, .second-section{
               width: 20rem;

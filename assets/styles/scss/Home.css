@@ -760,6 +760,10 @@ body .body-sections .blog_proceed-section .second-section .btn-container .btn:ho
   body .body-sections .blog_proceed-section .second-section {
     margin-left: auto;
   }
+  body .body-sections .blog_proceed-section .second-section .btn-container .btn p {
+    position: relative;
+    top: -0.5rem;
+  }
   body .body-sections .blog_proceed-section .first-section, body .body-sections .blog_proceed-section .second-section {
     width: 20rem;
   }

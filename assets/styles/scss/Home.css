@@ -647,7 +647,7 @@ body .body-sections .blog_proceed-section .first-section .text-container {
   height: 100%;
   text-align: center;
 }
-body .body-sections .blog_proceed-section .first-section .text-container strong {
+body .body-sections .blog_proceed-section .first-section .text-container h1 {
   font-size: 4em;
   font-family: "Linux Libertine O";
   color: red;

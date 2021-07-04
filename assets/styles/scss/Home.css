@@ -696,6 +696,8 @@ body .body-sections .blog_proceed-section .second-section .btn-container .btn {
 body .body-sections .blog_proceed-section .second-section .btn-container .btn p {
   font-size: 3em;
   font-family: "Bloodlust";
+  position: relative;
+  top: -0.5rem;
 }
 body .body-sections .blog_proceed-section .second-section .btn-container .btn:after {
   content: "";
@@ -759,10 +761,6 @@ body .body-sections .blog_proceed-section .second-section .btn-container .btn:ho
   }
   body .body-sections .blog_proceed-section .second-section {
     margin-left: auto;
-  }
-  body .body-sections .blog_proceed-section .second-section .btn-container .btn p {
-    position: relative;
-    top: -0.5rem;
   }
   body .body-sections .blog_proceed-section .first-section, body .body-sections .blog_proceed-section .second-section {
     width: 20rem;

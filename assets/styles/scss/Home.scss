@@ -28,8 +28,7 @@ $linuxlibertineo: 'Linux Libertine O';
 
 /*
     TO DO:
-    - make new section
-    - repair pagination
+    - make new section responsive
 */
 
 body{
@@ -701,9 +700,170 @@ body{
           }
         }
       }
+
+      .blog_proceed-section{
+        height: auto;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+
+        .first-section{
+          width: 40rem;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: auto;
+          cursor: default;
+
+          .text-container{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            
+            strong{
+              font-size: 4em;
+              font-family: $linuxlibertineo;
+              color: red;
+              text-transform: uppercase;
+            }
+          }
+        }
+
+        .second-section{
+          width: 25rem;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: auto;
+
+          .btn-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+            $color: red;
+
+              .btn{
+                display: inline-block;
+                padding: .5rem 1.25rem;
+                height: 4rem;
+                width: 12rem;
+                border-radius: 5px;
+                color: rgb(112, 11, 11);
+                text-transform: uppercase;
+                font-size: 3em;
+                font-family: $bloodlust;
+                transition: all .3s;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                border: none;
+
+                &:after {
+                  content: '';
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background-color: $color;
+                  border-radius: 5px;
+                  z-index: -2;
+                }
+                &:before {
+                  content: '';
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  width: 0%;
+                  height: 100%;
+                  background-color: darken($color, 15%);
+                  transition: all .6s;
+                  border-radius: 5px;
+                  z-index: -1;
+                }
+                &:hover {
+                  color: #fff;
+                  &:before {
+                    width: 100%;
+                  }
+                }
+              }
+          }
+        }
+      }
+      @media (max-width: 1400px) {
+        .blog_proceed-section{
+          .first-section{
+            width: 35rem;
+          }
+          .second-section{
+            width: 20rem;
+          }
+        }
+
+        @media (max-width:1220px) {
+          .blog_proceed-section{
+            .first-section{
+              width: 31rem;
+              .text-container{
+                .text{
+                  font-size: 3.5em;
+                }
+              }
+            }
+            .second-section{
+              width: 14rem;
+            }
+          }
+        }
+
+        @media (max-width: 768px) {
+          .blog_proceed-section{
+            display: block;
+            .first-section{
+              margin-right: auto;
+              margin-bottom: 1rem;
+              .text-container{
+                .text{
+                  font-size: 3em;
+                }
+              }
+            }
+            .second-section{
+              margin-left: auto;
+            }
+            .first-section, .second-section{
+              width: 20rem;
+            }
+          }
+
+          @media (max-width: 320px) {
+            .blog_proceed-section{
+              .first-section, .second-section{
+                 width: 14rem;
+              }
+            }
+          }
+        }
+      }
+      
     }
-
-
 }
+  
+
+
+
+
+
 
 

@@ -12,13 +12,10 @@
 
 /*
     TO DO:
-    - change font size from 'em' to 'clamp(x em, x vw, x em)'
-    - clean the code ( about section, footer section )
-    - add animations
-    - add smooth transitions
-    - clean html
-    - add 'comments' to html
-    - add 'comments' to scss
+    - change font size from 'em' to 'clamp(x em, x vw, x em) - proceed section, about section'
+    - add animations - body section
+    - add smooth transitions - foot section
+    - make new webpage called blog
 */
 body {
   height: 100vh;

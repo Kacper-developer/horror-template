@@ -33,13 +33,10 @@ $signature: 'Beauty', sans-serif;
 
 /*
     TO DO:
-    - change font size from 'em' to 'clamp(x em, x vw, x em)'
-    - clean the code ( about section, footer section )
-    - add animations
-    - add smooth transitions
-    - clean html
-    - add 'comments' to html
-    - add 'comments' to scss
+    - change font size from 'em' to 'clamp(x em, x vw, x em) - proceed section, about section'
+    - add animations - body section
+    - add smooth transitions - foot section
+    - make new webpage called blog
 */
 
 body{
@@ -57,6 +54,7 @@ body{
     overflow-x: hidden;
 
 
+    //head section
     .head-section{
       height: 100vh;
       width: 100vw;
@@ -66,6 +64,7 @@ body{
       background-position: center;
       background-repeat: no-repeat;
 
+      //navigation bar
       .navbar{
         position: relative;
 
@@ -78,6 +77,7 @@ body{
 
         background: transparent;
 
+        //brand
         .navbar-brand{
           cursor: pointer;
 
@@ -96,6 +96,7 @@ body{
           margin-top: .5rem;
         }
 
+        //hamburger
         #burger{display: none;}
         .burger{
           margin-top: clamp(1rem, 5vw, 2%);
@@ -123,6 +124,7 @@ body{
           }
         }
 
+        //hamburger menu
         .hamburger-menu{
           height: 100vh;
           width: 100vw;
@@ -270,6 +272,7 @@ body{
          .burger, .hamburger-menu{display: none;} 
         }
         
+        //navigation bar links
         .navbar-links{
           display: flex;
           justify-content: center;
@@ -313,6 +316,7 @@ body{
         }
       }
 
+      //head section content
       .head-section-content{
         display: flex;
         justify-content: center;
@@ -326,6 +330,7 @@ body{
         position: relative;
         top: -5rem;
   
+        //text and image
         .box-container{
           position: relative;
           top: -1rem;
@@ -392,6 +397,7 @@ body{
           }
         }
 
+        //social links
         .social-links{
           position: absolute;
           left: 4%;
@@ -594,6 +600,7 @@ body{
       }
     } 
 
+    //body section
     .body-sections{
       height: auto;
       width: 100vw;
@@ -601,6 +608,7 @@ body{
       display: flexbox;
       background-color: #000;
 
+      //slider
       .blog_slider-section{
         margin-top: 10rem;
 
@@ -722,6 +730,7 @@ body{
         }
       }
 
+      // proceed to blog 
       .blog_proceed-section{
         height: auto;
         width: 100vw;
@@ -934,10 +943,13 @@ body{
         }
       }
 
+      //about section
       #about-section{
         height: auto;
         width: 100vw;
+
         display: flex;
+
         margin-top: 15rem;
         margin-bottom: 15rem;
 
@@ -945,15 +957,21 @@ body{
           display: flex;
           justify-content: center;
           align-items: center;
+
           margin-left: auto;
+
           min-height: 65rem;
           min-width: 55rem; 
           max-height: 75rem;
           max-width: 65rem; 
+
           overflow: hidden;
+
           border-radius: 3650px;
+
           position: relative;
           right: -5%;
+
           z-index: 1;
 
           img{
@@ -964,18 +982,26 @@ body{
 
         .about-content{
           z-index: 10;
+
           width: 50%;
+
           display: block;
+
           text-align: center;
+
           color: red;
+
           position: relative;
           left: 5%;
+
           cursor: default;
 
           .header{
             width: 100%;
             max-width: 1000px;
+
             margin-top: 25rem;
+
             h1{
               font-family: $octobercrow;
               font-size: 6em;
@@ -984,9 +1010,11 @@ body{
 
           .content{
             margin-top: 1rem;
+
             width: 100%;
             max-width: 1000px;
             min-width: 25%;
+
             p{
               font-size: 1.75em;
               font-family: $reqiem;
@@ -995,89 +1023,121 @@ body{
         }
       }
       @media (max-width: 1400px) {
+
         #about-section{
           margin-top: 1rem;
           margin-bottom: 5rem;
+
           left: 15%;
+
           .image-circle{
             min-height: 65rem;
             min-width: 55rem; 
             max-height: 75rem;
             max-width: 65rem; 
+
             right: -20%;
           }
+
           .about-content{
+
             .header{
               width: calc(100% + 5rem);
             }
+
             .content{
               width: calc(100% + 5rem);
+
               p{
                 font-size: 1.5em;
               }
+              
             }
+
           }
         }
 
         @media (max-width: 1023px) {
           #about-section{
             margin-top: -2rem;
+
             .image-circle{
               min-height: 45rem;
               min-width: 35rem; 
+
               height: 55rem;
               min-width: 45rem;
+
               right: -25%;
             }
+
             .about-content{
               width: 40%;
               left: 5%;
+
               .header{
                 margin-top: 17rem;
+
                 width: calc(100% + 10rem);
               }
+
               .content{
                 width: calc(100% + 10rem);
               }
             }
+
           }
         }
 
         @media (max-width: 849px) {
           #about-section{
+
             .image-circle{
               min-height: 35rem;
               min-width: 30rem; 
               height: 55rem;
               min-width: 40rem;
+
               right: -25%;
             }
+
             .about-content{
+
               .header{
                 font-size: .9em;
+
                 margin-top: 17rem;
+
                 width: calc(100% + 10rem);
               }
+              
               .content{
                 font-size: 1em;
+
                 width: calc(100% + 10rem);
               }
+
             }
+
           }
         }
 
         @media (max-width: 767px) {
             #about-section{
               margin-top: 17.5rem;
+
               display: flex;
               justify-content: center;
               align-items: center;
+
               .image-circle{
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
+
                 right: 50%;
                 top: -10rem;
+
                 min-height: 55rem;
                 min-width: 45rem;
                 max-height: 0;
@@ -1086,68 +1146,96 @@ body{
                 img{
                   filter: grayscale(100%) brightness(40%);
                 }
+
               }
+
               .about-content{
                 position: relative;
                 left: 22.5rem;
+
                 width: 100vw;
                 height: 50vh;
+
                 text-align: center;
+              
                 .header{
                   width: 100vw;
+
                   margin-top: -10rem;
                 }
+
                 .content{
                   margin-left: auto;
                   margin-right: auto;
+
                   width: 100vw;
+
                   padding-left: 10vw;
                   padding-right: 10vw;
                 }
+
               }
             }
         }
+
       }
     }
 
+    //foot section
     .foot-section{
 
       .content{
         height: 15rem;
+
         background: #eee;
+
         display: flex;
         justify-content: center;
         align-items: center;
 
         .is-centered{
           width: 60rem;
+
           margin-left: auto;
           margin-right: auto;
+
           position: relative;
           top: -2.5rem;
+
           height: 15rem;
+
           padding-right: 2rem;
 
           .links{
             display: flex;
+
             list-style: none;
+
             justify-content: center;
             align-items: center;
 
             &::before{
               content: '';
+
               background: red;
+
               margin-right: 1rem;
+
               padding-left: 7.5rem;
               padding-top: .25rem;
+
               border-radius: 365px;
             }
             &::after{
               content: '';
+
               background: red;
+
               margin-left: 1rem;
+
               padding-left: 7.5rem;
               padding-top: .25rem;
+
               border-radius: 365px;
             }
 
@@ -1155,55 +1243,71 @@ body{
               display: flex;
               align-items: center;
               justify-content: center;
+
               margin-left: 1rem;
               margin-right: 1rem;
 
               a{
                 text-decoration: none;
                 text-transform: uppercase;
+
                 font-family: $reqiem;
                 color: red;
                 font-size: 2em;
               }
              
             }
+
             li:first-child{
               position: relative;
               top: 1.5px;
             }
+
           }
 
           .social{
             display: flex;
             justify-content: center;
             align-items: center;
+
             list-style: none;
 
             &::before{
               content: '';
+
               background: red;
+
               position: relative;
               top: -.2rem;
+
               margin-right: 1rem;
+
               padding-left: 7.5rem;
               padding-top: .25rem;
+
               border-radius: 365px;
             }
             &::after{
               content: '';
+
               background: red;
+
               position: relative;
               left: 1rem;
               top: -.2rem;
+
               margin-left: 1rem;
+
               padding-left: 7.5rem;
               padding-top: .25rem;
+
               border-radius: 365px;
             }
 
             li{
               margin-left: 1rem;
               margin-right: 1rem;
+
               display: flex;
               align-items: center;
               justify-content: center;
@@ -1211,14 +1315,18 @@ body{
               a{
                 text-decoration: none;
                 text-transform: uppercase;
+
                 font-family: $reqiem;
                 color: red;
                 font-size: 3em;
               }
+
               a:last-child{
                 font-size: 3.1em;
               }
+
             }
+
             li:last-child{
               position: relative;
               top: -1px;
@@ -1228,17 +1336,22 @@ body{
 
           .signature{
             cursor: default;
+
             position: relative;
             top: 2.5rem;
+
             h1{
               display: flex;
               justify-content: center;
               align-items: center;
+
               font-size: 1.5em;
+
               span{
                 font-size: 1.75em;
                 font-family: $signature;
               }
+
             }
           }
 
@@ -1247,6 +1360,7 @@ body{
 
       @media (max-width: 955px) {
         .content{
+
           .is-centered{
             top: -1rem;
             width: 60rem;
@@ -1254,28 +1368,36 @@ body{
             .links li a{
               font-size: 1.5em;
             }
+
             .social li a{
               font-size: 2.5em;
             }
+
             .signature h1 span{
               font-size: 1.5em;
             }
           }
+
         }
 
         @media (max-width: 830px) {
           .content{
+
             .is-centered{
+
               .links li{
                 margin-left: .5rem;
                 margin-right: .5rem;
               }
+
             }
+
           }
         }
 
         @media (max-width: 767px) {
           .content .is-centered{
+
             .links{
               &::before{
                 padding-left: 5rem;
@@ -1284,6 +1406,7 @@ body{
                 padding-left: 5rem;
               }
             }
+
             .social{
               &::before{
                 padding-left: 5rem;
@@ -1292,11 +1415,13 @@ body{
                 padding-left: 5rem;
               }
             }
+
           }
 
           @media (max-width: 688px) {
             .content .is-centered{
               top: 0;
+
               .links{
                 &::before{
                   padding-left: 2.5rem;
@@ -1305,6 +1430,7 @@ body{
                   padding-left: 2.5rem;
                 }
               }
+
               .social{
                 &::before{
                   padding-left: 2.5rem;
@@ -1320,32 +1446,41 @@ body{
                   font-size: 2.6em;
                 }
               }
+
             }
           }
 
           @media (max-width: 601px) {
             .content .is-centered{
               width: 100vw;
+
               top: -.5rem;
     
               .links{
                 position: relative;
                 left: -.5rem;
+
                 width: 100%;
+
                 &::before{
                   padding-left: 0rem;
                   padding-top: 0;
                 }
+
                 &::after{
                   padding-top: 0;
                   padding-left: 0rem;
                 }
+
               }
+
               .social{
+
                 &::before{
                   padding-top: 0;
                   padding-left: 0rem;
                 }
+
                 &::after{
                   padding-top: 0;
                   padding-left: 0rem;
@@ -1355,24 +1490,29 @@ body{
                   margin-left: .75rem;
                   margin-right: .75rem;
                 }
+
               }
             }
           }
 
           @media (max-width: 505px) {
             .content .is-centered{
+
               .links{
                 li a{
                   font-size: 1.25em;
                 }
               }
+
               .social{
               li a{
                 font-size: 2.25em;
               }
+
               li a:last-child{
                 font-size: 2.26em;
               }
+
               }
               
             }
@@ -1380,10 +1520,12 @@ body{
 
           @media (max-width: 433px) {
             .content{
+
               .is-centered{
                 height: 10rem;
               
               .links{
+
                 li{
                   margin-left: .25rem;
                   margin-right: .25rem;
@@ -1392,8 +1534,11 @@ body{
                     font-size: 1em;
                   }
                 }
+
               }
+
               .social{
+
                 li{
                   margin-left: .45rem;
                   margin-right: .45rem;
@@ -1402,12 +1547,16 @@ body{
                     font-size: 2em;
                   }
                 }
+
                 li a:last-child{
                   font-size: 2.1em;
                 }
+
               }
+
               .signature{
                 top: 1rem;
+
                 h1{
                   position: relative;
                   left: .5rem;
@@ -1417,9 +1566,12 @@ body{
                     font-size: 1.5em;
                   }
                 }
+
               }
+
             }
-          }
+
+            }
         }
       }
       }

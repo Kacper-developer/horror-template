@@ -3,6 +3,7 @@
 @import url("https://fonts.cdnfonts.com/css/bloodlust?styles=85048");
 @import url("https://fonts.cdnfonts.com/css/linux-libertine-o?styles=30056");
 @import url("https://fonts.cdnfonts.com/css/requiem-ii?styles=41639");
+@import url("http://fonts.cdnfonts.com/css/beauty?styles=21781");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -11,9 +12,13 @@
 
 /*
     TO DO:
-    - change font size from 'em' to 'clamp(x, x vw, x)'
-    - clean the code ( about section )
-    - find creative design for footer
+    - change font size from 'em' to 'clamp(x em, x vw, x em)'
+    - clean the code ( about section, footer section )
+    - add animations
+    - add smooth transitions
+    - clean html
+    - add 'comments' to html
+    - add 'comments' to scss
 */
 body {
   height: 100vh;
@@ -950,5 +955,293 @@ body .body-sections #about-section .about-content .content p {
     width: 100vw;
     padding-left: 10vw;
     padding-right: 10vw;
+  }
+}
+body .foot-section .content {
+  height: 15rem;
+  background: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .foot-section .content .is-centered {
+  width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: -2.5rem;
+  height: 15rem;
+  padding-right: 2rem;
+}
+body .foot-section .content .is-centered .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .foot-section .content .is-centered .links::before {
+  content: "";
+  background: red;
+  margin-right: 1rem;
+  padding-left: 7.5rem;
+  padding-top: 0.25rem;
+  border-radius: 365px;
+}
+body .foot-section .content .is-centered .links::after {
+  content: "";
+  background: red;
+  margin-left: 1rem;
+  padding-left: 7.5rem;
+  padding-top: 0.25rem;
+  border-radius: 365px;
+}
+body .foot-section .content .is-centered .links li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+body .foot-section .content .is-centered .links li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Requiem II", sans-serif;
+  color: red;
+  font-size: 2em;
+}
+body .foot-section .content .is-centered .links li:first-child {
+  position: relative;
+  top: 1.5px;
+}
+body .foot-section .content .is-centered .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+body .foot-section .content .is-centered .social::before {
+  content: "";
+  background: red;
+  position: relative;
+  top: -0.2rem;
+  margin-right: 1rem;
+  padding-left: 7.5rem;
+  padding-top: 0.25rem;
+  border-radius: 365px;
+}
+body .foot-section .content .is-centered .social::after {
+  content: "";
+  background: red;
+  position: relative;
+  left: 1rem;
+  top: -0.2rem;
+  margin-left: 1rem;
+  padding-left: 7.5rem;
+  padding-top: 0.25rem;
+  border-radius: 365px;
+}
+body .foot-section .content .is-centered .social li {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body .foot-section .content .is-centered .social li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Requiem II", sans-serif;
+  color: red;
+  font-size: 3em;
+}
+body .foot-section .content .is-centered .social li a:last-child {
+  font-size: 3.1em;
+}
+body .foot-section .content .is-centered .social li:last-child {
+  position: relative;
+  top: -1px;
+}
+body .foot-section .content .is-centered .signature {
+  cursor: default;
+  position: relative;
+  top: 2.5rem;
+}
+body .foot-section .content .is-centered .signature h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5em;
+}
+body .foot-section .content .is-centered .signature h1 span {
+  font-size: 1.75em;
+  font-family: "Beauty", sans-serif;
+}
+@media (max-width: 955px) {
+  body .foot-section .content .is-centered {
+    top: -1rem;
+    width: 60rem;
+  }
+  body .foot-section .content .is-centered .links li a {
+    font-size: 1.5em;
+  }
+  body .foot-section .content .is-centered .social li a {
+    font-size: 2.5em;
+  }
+  body .foot-section .content .is-centered .signature h1 span {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 955px) and (max-width: 830px) {
+  body .foot-section .content .is-centered .links li {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+@media (max-width: 955px) and (max-width: 767px) {
+  body .foot-section .content .is-centered .links::before {
+    padding-left: 5rem;
+  }
+  body .foot-section .content .is-centered .links::after {
+    padding-left: 5rem;
+  }
+  body .foot-section .content .is-centered .social::before {
+    padding-left: 5rem;
+  }
+  body .foot-section .content .is-centered .social::after {
+    padding-left: 5rem;
+  }
+}
+@media (max-width: 955px) and (max-width: 767px) and (max-width: 688px) {
+  body .foot-section .content .is-centered {
+    top: 0;
+  }
+  body .foot-section .content .is-centered .links::before {
+    padding-left: 2.5rem;
+  }
+  body .foot-section .content .is-centered .links::after {
+    padding-left: 2.5rem;
+  }
+  body .foot-section .content .is-centered .social::before {
+    padding-left: 2.5rem;
+  }
+  body .foot-section .content .is-centered .social::after {
+    padding-left: 2.5rem;
+  }
+  body .foot-section .content .is-centered .social li a {
+    font-size: 2.5em;
+  }
+  body .foot-section .content .is-centered .social li a:last-child {
+    font-size: 2.6em;
+  }
+}
+@media (max-width: 955px) and (max-width: 767px) and (max-width: 601px) {
+  body .foot-section .content .is-centered {
+    width: 100vw;
+    top: -0.5rem;
+  }
+  body .foot-section .content .is-centered .links {
+    position: relative;
+    left: -0.5rem;
+    width: 100%;
+  }
+  body .foot-section .content .is-centered .links::before {
+    padding-left: 0rem;
+    padding-top: 0;
+  }
+  body .foot-section .content .is-centered .links::after {
+    padding-top: 0;
+    padding-left: 0rem;
+  }
+  body .foot-section .content .is-centered .social::before {
+    padding-top: 0;
+    padding-left: 0rem;
+  }
+  body .foot-section .content .is-centered .social::after {
+    padding-top: 0;
+    padding-left: 0rem;
+  }
+  body .foot-section .content .is-centered .social li {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+}
+@media (max-width: 955px) and (max-width: 767px) and (max-width: 505px) {
+  body .foot-section .content .is-centered .links li a {
+    font-size: 1.25em;
+  }
+  body .foot-section .content .is-centered .social li a {
+    font-size: 2.25em;
+  }
+  body .foot-section .content .is-centered .social li a:last-child {
+    font-size: 2.26em;
+  }
+}
+@media (max-width: 955px) and (max-width: 767px) and (max-width: 433px) {
+  body .foot-section .content .is-centered {
+    height: 10rem;
+  }
+  body .foot-section .content .is-centered .links li {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+  body .foot-section .content .is-centered .links li a {
+    font-size: 1em;
+  }
+  body .foot-section .content .is-centered .social li {
+    margin-left: 0.45rem;
+    margin-right: 0.45rem;
+  }
+  body .foot-section .content .is-centered .social li a {
+    font-size: 2em;
+  }
+  body .foot-section .content .is-centered .social li a:last-child {
+    font-size: 2.1em;
+  }
+  body .foot-section .content .is-centered .signature {
+    top: 1rem;
+  }
+  body .foot-section .content .is-centered .signature h1 {
+    position: relative;
+    left: 0.5rem;
+    font-size: 1em;
+  }
+  body .foot-section .content .is-centered .signature h1 span {
+    font-size: 1.5em;
   }
 }/*# sourceMappingURL=Home.css.map */

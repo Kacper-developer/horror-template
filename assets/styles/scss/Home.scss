@@ -13,6 +13,7 @@ $blueWhite: #edf2f4;
 @import url('https://fonts.cdnfonts.com/css/bloodlust?styles=85048');
 @import url('https://fonts.cdnfonts.com/css/linux-libertine-o?styles=30056');
 @import url('https://fonts.cdnfonts.com/css/requiem-ii?styles=41639');
+@import url('http://fonts.cdnfonts.com/css/beauty?styles=21781');
 
 $lato: 'Lato';
 $montserrat: 'Montserrat';
@@ -21,6 +22,7 @@ $bloodlust: 'Bloodlust';
 $linuxlibertineo: 'Linux Libertine O';
 $reqiem: 'Requiem II', sans-serif;
 $metalmania: 'Metal Mania', cursive;
+$signature: 'Beauty', sans-serif;
                 
 
 *{
@@ -31,9 +33,13 @@ $metalmania: 'Metal Mania', cursive;
 
 /*
     TO DO:
-    - change font size from 'em' to 'clamp(x, x vw, x)'
-    - clean the code ( about section )
-    - find creative design for footer
+    - change font size from 'em' to 'clamp(x em, x vw, x em)'
+    - clean the code ( about section, footer section )
+    - add animations
+    - add smooth transitions
+    - clean html
+    - add 'comments' to html
+    - add 'comments' to scss
 */
 
 body{
@@ -1102,8 +1108,322 @@ body{
             }
         }
       }
-  }
-      
+    }
+
+    .foot-section{
+
+      .content{
+        height: 15rem;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .is-centered{
+          width: 60rem;
+          margin-left: auto;
+          margin-right: auto;
+          position: relative;
+          top: -2.5rem;
+          height: 15rem;
+          padding-right: 2rem;
+
+          .links{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+
+            &::before{
+              content: '';
+              background: red;
+              margin-right: 1rem;
+              padding-left: 7.5rem;
+              padding-top: .25rem;
+              border-radius: 365px;
+            }
+            &::after{
+              content: '';
+              background: red;
+              margin-left: 1rem;
+              padding-left: 7.5rem;
+              padding-top: .25rem;
+              border-radius: 365px;
+            }
+
+            li{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-left: 1rem;
+              margin-right: 1rem;
+
+              a{
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: $reqiem;
+                color: red;
+                font-size: 2em;
+              }
+             
+            }
+            li:first-child{
+              position: relative;
+              top: 1.5px;
+            }
+          }
+
+          .social{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+
+            &::before{
+              content: '';
+              background: red;
+              position: relative;
+              top: -.2rem;
+              margin-right: 1rem;
+              padding-left: 7.5rem;
+              padding-top: .25rem;
+              border-radius: 365px;
+            }
+            &::after{
+              content: '';
+              background: red;
+              position: relative;
+              left: 1rem;
+              top: -.2rem;
+              margin-left: 1rem;
+              padding-left: 7.5rem;
+              padding-top: .25rem;
+              border-radius: 365px;
+            }
+
+            li{
+              margin-left: 1rem;
+              margin-right: 1rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              a{
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: $reqiem;
+                color: red;
+                font-size: 3em;
+              }
+              a:last-child{
+                font-size: 3.1em;
+              }
+            }
+            li:last-child{
+              position: relative;
+              top: -1px;
+            }
+
+          }
+
+          .signature{
+            cursor: default;
+            position: relative;
+            top: 2.5rem;
+            h1{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.5em;
+              span{
+                font-size: 1.75em;
+                font-family: $signature;
+              }
+            }
+          }
+
+        }
+      }
+
+      @media (max-width: 955px) {
+        .content{
+          .is-centered{
+            top: -1rem;
+            width: 60rem;
+
+            .links li a{
+              font-size: 1.5em;
+            }
+            .social li a{
+              font-size: 2.5em;
+            }
+            .signature h1 span{
+              font-size: 1.5em;
+            }
+          }
+        }
+
+        @media (max-width: 830px) {
+          .content{
+            .is-centered{
+              .links li{
+                margin-left: .5rem;
+                margin-right: .5rem;
+              }
+            }
+          }
+        }
+
+        @media (max-width: 767px) {
+          .content .is-centered{
+            .links{
+              &::before{
+                padding-left: 5rem;
+              }
+              &::after{
+                padding-left: 5rem;
+              }
+            }
+            .social{
+              &::before{
+                padding-left: 5rem;
+              }
+              &::after{
+                padding-left: 5rem;
+              }
+            }
+          }
+
+          @media (max-width: 688px) {
+            .content .is-centered{
+              top: 0;
+              .links{
+                &::before{
+                  padding-left: 2.5rem;
+                }
+                &::after{
+                  padding-left: 2.5rem;
+                }
+              }
+              .social{
+                &::before{
+                  padding-left: 2.5rem;
+                }
+                &::after{
+                  padding-left: 2.5rem;
+                }
+
+                li a{
+                  font-size: 2.5em;
+                }
+                li a:last-child{
+                  font-size: 2.6em;
+                }
+              }
+            }
+          }
+
+          @media (max-width: 601px) {
+            .content .is-centered{
+              width: 100vw;
+              top: -.5rem;
+    
+              .links{
+                position: relative;
+                left: -.5rem;
+                width: 100%;
+                &::before{
+                  padding-left: 0rem;
+                  padding-top: 0;
+                }
+                &::after{
+                  padding-top: 0;
+                  padding-left: 0rem;
+                }
+              }
+              .social{
+                &::before{
+                  padding-top: 0;
+                  padding-left: 0rem;
+                }
+                &::after{
+                  padding-top: 0;
+                  padding-left: 0rem;
+                }
+
+                li{
+                  margin-left: .75rem;
+                  margin-right: .75rem;
+                }
+              }
+            }
+          }
+
+          @media (max-width: 505px) {
+            .content .is-centered{
+              .links{
+                li a{
+                  font-size: 1.25em;
+                }
+              }
+              .social{
+              li a{
+                font-size: 2.25em;
+              }
+              li a:last-child{
+                font-size: 2.26em;
+              }
+              }
+              
+            }
+          }
+
+          @media (max-width: 433px) {
+            .content{
+              .is-centered{
+                height: 10rem;
+              
+              .links{
+                li{
+                  margin-left: .25rem;
+                  margin-right: .25rem;
+
+                  a{
+                    font-size: 1em;
+                  }
+                }
+              }
+              .social{
+                li{
+                  margin-left: .45rem;
+                  margin-right: .45rem;
+
+                  a{
+                    font-size: 2em;
+                  }
+                }
+                li a:last-child{
+                  font-size: 2.1em;
+                }
+              }
+              .signature{
+                top: 1rem;
+                h1{
+                  position: relative;
+                  left: .5rem;
+                  font-size: 1em;
+
+                  span{
+                    font-size: 1.5em;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      }
+    }   
 }
 
   

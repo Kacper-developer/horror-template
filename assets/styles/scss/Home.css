@@ -12,8 +12,9 @@
 
 /*
     TO DO:
+    - add social links under .box-container image
+    - add new RDW ( responsive design width ) - widescreen (1216px ), fullhd ( 1408px )
     - change font size from 'em' to 'clamp(x em, x vw, x em) - proceed section, about section'
-    - add animations - body section
     - add smooth transitions - foot section
     - make new webpage called blog
 */
@@ -40,7 +41,7 @@ body .head-section .navbar {
   position: relative;
   width: 100vw;
   height: auto;
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,13 +86,7 @@ body .head-section .navbar .burger .slash {
   background: red;
 }
 body .head-section .navbar .hamburger-menu {
-  height: 100vh;
-  width: 100vw;
-  background: #333;
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: -100vw;
+  background: #eee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,122 +97,56 @@ body .head-section .navbar .hamburger-menu {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 0;
-  margin: 0;
-  -webkit-transition: left 0.4s;
-  transition: left 0.4s;
+  width: 100vw;
+  position: absolute;
+  top: 4.75rem;
+  left: 0;
+  padding: 20px 0;
 }
 body .head-section .navbar .hamburger-menu ul {
-  padding: 0;
-  margin: 0;
-  -webkit-transition: top 0.65s;
-  transition: top 0.65s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  width: 98%;
 }
 body .head-section .navbar .hamburger-menu ul a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
   text-decoration: none;
-  color: red;
-  font-family: "Linux Libertine O";
-  font-size: 2.7em;
-  margin: 0;
-  padding: 0;
 }
 body .head-section .navbar .hamburger-menu ul a li {
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100vw;
-  margin-bottom: 0.5rem;
-  -webkit-transition: background 0.25s;
-  transition: background 0.25s;
-}
-body .head-section .navbar .hamburger-menu ul a li:hover {
-  background: #252525;
-}
-body .head-section .navbar .hamburger-menu .social {
-  cursor: default;
-  bottom: 0;
-  position: absolute;
-  height: 4rem;
-  width: 100vw;
-  background: #252525;
+  font-family: "Linux Libertine O";
   color: red;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2em;
-  -webkit-transition: height 0.65s;
-  transition: height 0.65s;
+  font-size: 1.25em;
 }
-body .head-section .navbar .hamburger-menu .social ul {
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 0.5rem;
-}
-body .head-section .navbar .hamburger-menu .social ul li {
-  margin-right: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-}
-body .head-section .navbar .hamburger-menu .social ul li a {
-  position: relative;
-  top: 0.2rem;
-  font-size: 1.5em;
-}
-@media (max-height: 400px) {
+@media (max-width: 300px) {
   body .head-section .navbar .hamburger-menu ul {
-    position: relative;
-    top: -1rem;
-  }
-  body .head-section .navbar .hamburger-menu ul a {
-    font-size: 2.5em;
-  }
-  body .head-section .navbar .hamburger-menu .social ul li a {
-    top: 1.3rem;
-  }
-}
-@media (max-height: 400px) and (max-height: 320px) {
-  body .head-section .navbar .hamburger-menu ul a {
-    font-size: 2em;
-  }
-  body .head-section .navbar .hamburger-menu .social {
-    height: 3rem;
-    font-size: 1.75em;
+    display: block;
   }
 }
 @media (min-width: 768px) {
   body .head-section .navbar .burger, body .head-section .navbar .hamburger-menu {
-    display: none;
+    display: none !important;
   }
 }
 body .head-section .navbar .navbar-links {
@@ -271,6 +200,11 @@ body .head-section .navbar .navbar-links ul li a {
 @media (max-width: 767px) {
   body .head-section .navbar .navbar-links {
     display: none;
+  }
+}
+@media (min-width: 768px) {
+  body .head-section .navbar {
+    background: transparent !important;
   }
 }
 body .head-section .head-section-content {

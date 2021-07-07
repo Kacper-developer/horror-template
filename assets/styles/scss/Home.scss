@@ -33,8 +33,9 @@ $signature: 'Beauty', sans-serif;
 
 /*
     TO DO:
+    - add social links under .box-container image
+    - add new RDW ( responsive design width ) - widescreen (1216px ), fullhd ( 1408px )
     - change font size from 'em' to 'clamp(x em, x vw, x em) - proceed section, about section'
-    - add animations - body section
     - add smooth transitions - foot section
     - make new webpage called blog
 */
@@ -71,7 +72,7 @@ body{
         width: 100vw;
         height: auto;
 
-        overflow: hidden;
+        overflow: visible;
 
         display: flex;
 
@@ -126,150 +127,62 @@ body{
 
         //hamburger menu
         .hamburger-menu{
-          height: 100vh;
-          width: 100vw;
-
-          background: #333;
-
-          z-index: 1000;
-
-          position: fixed;
-          top: 0;
-          left: -100vw;
+          background: #eee;
 
           display: flex;
           justify-content: center;
           align-items: center;
           text-align: center;
 
-          padding: 0;
-          margin: 0;
+          width: 100vw;
 
-          transition: left .4s;
-          
+          position: absolute;
+          top: 4.75rem;
+          left: 0;
+
+          padding: 20px 0;
 
           ul{
-            padding: 0;
-            margin: 0;
-
-            transition: top .65s;
-
-           a{
-            text-decoration: none;
-
-            color: red;
-            font-family: $linuxlibertineo;
-            font-size: 2.7em;
-
-            margin: 0;
-            padding: 0;
-
-            li{
-              margin: 0;
-              padding: 0;
-
-              display: flex;
-              justify-content: center;
-              align-items: center;
-
-              width: 100vw;
-
-              margin-bottom: .5rem;
-
-              transition: background .25s;
-            }
-
-            li:hover{
-              background: #252525;
-            }
-           }
-
-          }
-
-          .social{
-            cursor: default;
-
-            bottom: 0;
-            position: absolute;
-            
-            height: 4rem;
-            width: 100vw;
-
-            background: #252525;
-            color: red;
-
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
 
-            font-size: 2em;
+            margin-left: auto;
+            margin-right: auto;
 
-            transition: height .65s;
+            list-style: none;
 
-            ul{
-              height: 100%;
-              width: 100%;
+            width: 98%;
 
+            a{
               display: flex;
               justify-content: center;
               align-items: center;
+              text-align: center;
 
+              margin-right: .5rem;
               margin-left: .5rem;
 
+              text-decoration: none;
+
               li{
-                margin-right: 2rem;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                height: 100%;
-
-                a{
-                  position: relative;
-                  top: .2rem;
-
-                  font-size: 1.5em;
-                }
+                font-family: $linuxlibertineo;
+                color: red;
+                font-size: 1.25em;
               }
             }
           }
-
-          @media (max-height: 400px) {
+          @media (max-width: 300px) {
             ul{
-              position: relative;
-              top: -1rem;
-
-              a{
-                font-size: 2.5em;
-              }
-            }
-
-            .social{
-              ul li a{
-                top: 1.3rem;
-              }
-            }
-
-            @media (max-height: 320px) {
-              ul{
-                a{
-                  font-size: 2em;
-                }
-              }
-
-              .social{
-                height: 3rem;
-
-                font-size: 1.75em;
-              }
+              display: block;
             }
           }
-  
+
         }
 
         @media (min-width: $tablet) {
-         .burger, .hamburger-menu{display: none;} 
+         .burger, .hamburger-menu{display: none !important;} 
         }
         
         //navigation bar links
@@ -314,6 +227,9 @@ body{
         @media (max-width: 767px) {
           .navbar-links{display: none;}
         }
+      }
+      @media (min-width: $tablet) {
+        .navbar{background: transparent !important;}
       }
 
       //head section content

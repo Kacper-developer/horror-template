@@ -787,7 +787,7 @@ body .body-sections .blog_proceed-section .second-section .btn-container .btn:ho
     width: 14rem;
   }
 }
-body .body-sections #about-section {
+body .body-sections .about-section {
   height: auto;
   width: 100vw;
   display: -webkit-box;
@@ -796,7 +796,7 @@ body .body-sections #about-section {
   margin-top: 15rem;
   margin-bottom: 15rem;
 }
-body .body-sections #about-section .image-circle {
+body .body-sections .about-section .image-circle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -817,11 +817,11 @@ body .body-sections #about-section .image-circle {
   right: -5%;
   z-index: 1;
 }
-body .body-sections #about-section .image-circle img {
+body .body-sections .about-section .image-circle img {
   width: 100%;
   height: 100%;
 }
-body .body-sections #about-section .about-content {
+body .body-sections .about-section .about-content {
   z-index: 10;
   width: 50%;
   display: block;
@@ -831,91 +831,91 @@ body .body-sections #about-section .about-content {
   left: 5%;
   cursor: default;
 }
-body .body-sections #about-section .about-content .header {
+body .body-sections .about-section .about-content .header {
   width: 100%;
   max-width: 1000px;
   margin-top: 25rem;
 }
-body .body-sections #about-section .about-content .header h1 {
+body .body-sections .about-section .about-content .header h1 {
   font-family: "October Crow";
   font-size: 6em;
 }
-body .body-sections #about-section .about-content .content {
+body .body-sections .about-section .about-content .content {
   margin-top: 1rem;
   width: 100%;
   max-width: 1000px;
   min-width: 25%;
 }
-body .body-sections #about-section .about-content .content p {
+body .body-sections .about-section .about-content .content p {
   font-size: 1.75em;
   font-family: "Requiem II", sans-serif;
 }
 @media (max-width: 1400px) {
-  body .body-sections #about-section {
+  body .body-sections .about-section {
     margin-top: 1rem;
     margin-bottom: 5rem;
     left: 15%;
   }
-  body .body-sections #about-section .image-circle {
+  body .body-sections .about-section .image-circle {
     min-height: 65rem;
     min-width: 55rem;
     max-height: 75rem;
     max-width: 65rem;
     right: -20%;
   }
-  body .body-sections #about-section .about-content .header {
+  body .body-sections .about-section .about-content .header {
     width: calc(100% + 5rem);
   }
-  body .body-sections #about-section .about-content .content {
+  body .body-sections .about-section .about-content .content {
     width: calc(100% + 5rem);
   }
-  body .body-sections #about-section .about-content .content p {
+  body .body-sections .about-section .about-content .content p {
     font-size: 1.5em;
   }
 }
 @media (max-width: 1400px) and (max-width: 1023px) {
-  body .body-sections #about-section {
+  body .body-sections .about-section {
     margin-top: -2rem;
   }
-  body .body-sections #about-section .image-circle {
+  body .body-sections .about-section .image-circle {
     min-height: 45rem;
     min-width: 35rem;
     height: 55rem;
     min-width: 45rem;
     right: -25%;
   }
-  body .body-sections #about-section .about-content {
+  body .body-sections .about-section .about-content {
     width: 40%;
     left: 5%;
   }
-  body .body-sections #about-section .about-content .header {
+  body .body-sections .about-section .about-content .header {
     margin-top: 17rem;
     width: calc(100% + 10rem);
   }
-  body .body-sections #about-section .about-content .content {
+  body .body-sections .about-section .about-content .content {
     width: calc(100% + 10rem);
   }
 }
 @media (max-width: 1400px) and (max-width: 849px) {
-  body .body-sections #about-section .image-circle {
+  body .body-sections .about-section .image-circle {
     min-height: 35rem;
     min-width: 30rem;
     height: 55rem;
     min-width: 40rem;
     right: -25%;
   }
-  body .body-sections #about-section .about-content .header {
+  body .body-sections .about-section .about-content .header {
     font-size: 0.9em;
     margin-top: 17rem;
     width: calc(100% + 10rem);
   }
-  body .body-sections #about-section .about-content .content {
+  body .body-sections .about-section .about-content .content {
     font-size: 1em;
     width: calc(100% + 10rem);
   }
 }
 @media (max-width: 1400px) and (max-width: 767px) {
-  body .body-sections #about-section {
+  body .body-sections .about-section {
     margin-top: 17.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -927,7 +927,7 @@ body .body-sections #about-section .about-content .content p {
         -ms-flex-align: center;
             align-items: center;
   }
-  body .body-sections #about-section .image-circle {
+  body .body-sections .about-section .image-circle {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -938,22 +938,22 @@ body .body-sections #about-section .about-content .content p {
     max-height: 0;
     max-width: 0;
   }
-  body .body-sections #about-section .image-circle img {
+  body .body-sections .about-section .image-circle img {
     -webkit-filter: grayscale(100%) brightness(40%);
             filter: grayscale(100%) brightness(40%);
   }
-  body .body-sections #about-section .about-content {
+  body .body-sections .about-section .about-content {
     position: relative;
     left: 22.5rem;
     width: 100vw;
     height: 50vh;
     text-align: center;
   }
-  body .body-sections #about-section .about-content .header {
+  body .body-sections .about-section .about-content .header {
     width: 100vw;
     margin-top: -10rem;
   }
-  body .body-sections #about-section .about-content .content {
+  body .body-sections .about-section .about-content .content {
     margin-left: auto;
     margin-right: auto;
     width: 100vw;

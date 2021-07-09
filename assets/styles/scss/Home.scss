@@ -34,7 +34,6 @@ $signature: 'Beauty', sans-serif;
 
 /*
     TO DO:
-    - add smooth transitions - foot section, social links
     - clean all the code
     - make new webpage called blog
 */
@@ -182,7 +181,9 @@ body{
         }
 
         @media (min-width: $tablet) {
+
          .burger, .hamburger-menu{display: none !important;} 
+
         }
         
         //navigation bar links
@@ -221,15 +222,23 @@ body{
         }
 
         @media (min-width: $desktop) {
+
           .navbar-links{margin-right: 4%;}
+
         }
 
         @media (max-width: 767px) {
+
           .navbar-links{display: none;}
+
         }
+
       }
+
       @media (min-width: $tablet) {
+
         .navbar{background: transparent !important;}
+
       }
 
       //head section content
@@ -297,13 +306,16 @@ body{
           }
 
           @media (min-width: $desktop) {
+
             .my-image{
               margin-left: 1.5rem;
 
               max-height: 525px;
               max-width: 475px;
             }
+
           }
+
         }
 
         //social links
@@ -326,22 +338,29 @@ body{
 
             li{
               width: 3.5rem;
+
               display: flex;
               justify-content: center;
               align-items: center;
+
               margin-top: 1rem;
               margin-bottom: 2rem;
+
               a{
                 font-size: 3em;
                 color: red;
+
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 width: 100%;
 
                 i{
+
                   position: relative;
                   left: -.5rem;
+
                 }
               }
             }
@@ -352,7 +371,9 @@ body{
         @media (max-height: 800px) {
           
           .box-container{
+
             top: 1rem;
+
           }
         
           @media (max-height: 795px) {
@@ -371,12 +392,13 @@ body{
                 margin-top: 0;
               }
             }
+
           }
 
           }
 
           @media (max-height: 690px) {
-            .box-container{top: 1.5rem;}
+            .box-container{ top: 1.5rem; }
   
             @media (max-height: 650px) {
               .box-container{ 
@@ -385,7 +407,9 @@ body{
                   max-width: 425px;
                 }
             }
+
             }
+
           }
 
           @media (max-height: 650px) {
@@ -397,6 +421,7 @@ body{
             .social-links ul li{
               margin-top: 0;
               margin-bottom: .75rem;
+
               a{
                 font-size: 2.5em;
               }
@@ -410,37 +435,42 @@ body{
               top: 1.5rem;
               
               .my-image{
-              max-height: 400px;
-              max-width: 350px;
+                max-height: 400px;
+                max-width: 350px;
               }
 
               .text{
                 font-size: 2em;
               }
           }
+
           }
 
           @media (max-height: 575px) {
+
             .box-container{
               top: .5rem;
             }
+
           }
 
           @media (max-height: 545px) {
+
             .box-container{
               top: 2rem;
               
               .my-image{
-              max-height: 300px;
-              max-width: 250px;
+                max-height: 300px;
+                max-width: 250px;
               }
 
-              .text{font-size: 2em;}
+              .text{ font-size: 2em; }
+
              }
 
              .social-links{
                width: 2.5rem;
-               left: -auto;
+               left: auto;
 
                ul{
                  display: block;
@@ -449,11 +479,15 @@ body{
                   margin-top: 1rem;
                   margin-bottom: 1rem;
                  }
+
                }
+               
              }
+
           }
 
           @media (max-height: 410px) {
+
             .box-container{
               top: 1.5rem;
 
@@ -466,18 +500,23 @@ body{
                 margin-right: auto;
               }
 
-              .text{font-size: 1.5em;}
-              .text span{top: -.7rem;}
+              .text{ font-size: 1.5em; }
+
+              .text span{ top: -.7rem; }
+
             }
+
           }
 
           @media (max-height: 320px) {
+
             .box-container{
               top: 2rem;
 
               .text{display: none;}
 
             }
+
           }
 
         }
@@ -494,6 +533,7 @@ body{
 
             .text{
               font-size: 3em;
+
               top: 9rem;
               left: 1rem;
             }
@@ -502,6 +542,7 @@ body{
 
           .social-links{
             width: 10rem;
+
             left: 2.5%;
             bottom: 4%;
 
@@ -511,25 +552,35 @@ body{
               li{
                 margin-left: .3rem;
                 margin-right: .3rem;
+
                 a{
                   font-size: 3.5em;
                 }
+
               }
             }
           }
 
           @media (max-height: 795px) {
+
             .social-links{
+
               bottom: 5%;
+
             }
 
             @media (max-height: 650px) {
+
               .social-links{
+
                 bottom: 10%;
+
               }
+
             }
 
             @media (max-height: 590px) {
+
               .box-container{
                 .text{
                   top: 5rem;
@@ -537,32 +588,41 @@ body{
               }
            
               @media (max-height: 490px) {
+
                 .box-container{
                   .text{
                     top: 4rem;
                   }
                 }
+
               }
   
               @media (max-height: 410px) {
+
                 .box-container{
                   .text{
                     top: 1.5rem;
                   }
                 }
+
               }
+
             }
 
             @media (max-height: 350px) {
+
               .social-links{
                 bottom: 15%;
               }
+
             }
+
           }
 
         }
 
         @media (min-width: $desktop) {
+
           .box-container{
             .text{
               top: 9.5rem;
@@ -571,24 +631,30 @@ body{
           }
 
           .social-links{
+
             ul li{
               margin-right: 2.5rem;
 
               a{
                 font-size: 3.5em;
               }
+
             }
+
           }
 
           @media (max-height: 650px) {
+
             .box-container{
               .text{
                 top: 8rem;
                 font-size: 3.5em;
               }
+
             }
 
             @media (max-height: 600px) {
+
               .box-container{
                 .text{
                   top: 6rem;
@@ -597,6 +663,7 @@ body{
               }
 
               @media (max-height: 500px) {
+
                 .box-container{
                   .text{
                     top: 4rem;
@@ -605,15 +672,18 @@ body{
                 }
 
                 @media (max-height: 410px) {
+
                   .box-container{
                     .text{
                       top: 1em;
                     }
                   }
+
                 }
               }
             }
           }
+
         }
       }
     } 
@@ -650,10 +720,12 @@ body{
                 color: red;
                 font-size: 40px;
               }
+
               .arrow-icon-first{
                 position: relative;
                 right: 4rem;
               }
+
               .arrow-icon-last{
                 margin-left: 8rem;
               }
@@ -662,12 +734,16 @@ body{
           }
           @media (max-width: 1330px) {
             .splide__arrows{
+
               top: 9.5rem;
+
             }
 
             @media (max-width: $tablet) {
               .splide__arrows{
+
                 display: none;
+                
               }
             }
           }
@@ -689,17 +765,20 @@ body{
                 }
 
                 @media (max-width: $tablet) {
+
                   .splide__slide{
                     height: 250px !important;
                     min-width: 0px !important;
                     width: 200px !important;
                   }
+
                 }
               }
 
             }
 
           }
+          
           div .splide__pagination{
             z-index: 100;
 
@@ -712,6 +791,7 @@ body{
               width: 30px;
               height: 7px;
             }
+
           }
         }
         @media (max-width: $widescreen) {
@@ -721,19 +801,23 @@ body{
           }
 
           @media (max-width: $tablet) {
+
             .splide{
               width: 100%;
               max-width: 300px;
             }
+            
           }
         }
       }
+
       @media (max-width: $widescreen) {
         .blog_slider-section{
           height: 30rem;
         }
 
         @media (max-width: $tablet) {
+
           .blog_slider-section{
             margin-top: 2rem;
 
@@ -745,6 +829,7 @@ body{
               height: 26rem;
             }
           }
+
         }
       }
 
@@ -787,7 +872,9 @@ body{
               color: red;
               text-transform: uppercase;
             }
+
           }
+
         }
 
         .second-section{
@@ -881,6 +968,7 @@ body{
           }
         }
       }
+
       @media (max-width: $fullhd) {
         .blog_proceed-section{
 
@@ -912,7 +1000,9 @@ body{
             }
 
             .second-section{
+
               width: 14rem;
+              
             }
 
           }
@@ -996,6 +1086,7 @@ body{
             width: 100%;
             height: 100%; 
           }
+
         }
 
         .about-content{
@@ -1024,6 +1115,7 @@ body{
               font-family: $octobercrow;
               font-size: 6em;
             }
+
           }
 
           .content{
@@ -1037,9 +1129,11 @@ body{
               font-size: 1.75em;
               font-family: $reqiem;
             }
+
           }
         }
       }
+
       @media (max-width: $fullhd) {
 
         #about-section{
@@ -1197,6 +1291,7 @@ body{
         }
 
       }
+
     }
 
     //foot section
@@ -1394,6 +1489,7 @@ body{
             .signature h1 span{
               font-size: 1.5em;
             }
+
           }
 
         }
@@ -1441,15 +1537,18 @@ body{
               top: 0;
 
               .links{
+
                 &::before{
                   padding-left: 2.5rem;
                 }
                 &::after{
                   padding-left: 2.5rem;
                 }
+
               }
 
               .social{
+
                 &::before{
                   padding-left: 2.5rem;
                 }
@@ -1463,12 +1562,14 @@ body{
                 li a:last-child{
                   font-size: 2.6em;
                 }
+
               }
 
             }
           }
 
           @media (max-width: 601px) {
+
             .content .is-centered{
               width: 100vw;
 
@@ -1510,7 +1611,9 @@ body{
                 }
 
               }
+
             }
+
           }
 
           @media (max-width: 505px) {
@@ -1593,6 +1696,7 @@ body{
         }
       }
       }
+      
     }   
 
 }

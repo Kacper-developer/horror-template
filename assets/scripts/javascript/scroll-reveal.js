@@ -17,8 +17,8 @@ ScrollReveal().reveal('.blog_proceed-section', {
     distance: '75%'
 }, slideUp);
 
-ScrollReveal().reveal('#about-section', {
-    delay:  1500,
+ScrollReveal().reveal('.about-section', {
+    delay:  1250,
     duration: 1000,
     distance: '25%'
 }, slideUp);

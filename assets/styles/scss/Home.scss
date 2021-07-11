@@ -35,8 +35,7 @@ $signature: 'Beauty', sans-serif;
 /*
     TO DO:
     - fix splide ( add some changes )
-    - fix social links hover effect
-    - and maybe add some changes to social links
+    - add some changes to social links ( change size of icons and space between )
     - minimize images weight
 */
 
@@ -355,6 +354,8 @@ body{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                text-decoration: none;
 
                 width: 100%;
 
@@ -687,7 +688,9 @@ body{
           }
 
         }
+        
       }
+
     } 
 
     //body section

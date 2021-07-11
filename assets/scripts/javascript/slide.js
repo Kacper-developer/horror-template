@@ -1,3 +1,5 @@
+
+
 new Splide( '.splide', {
 	classes: {
 		arrows: 'splide__arrows arrow',
@@ -8,3 +10,4 @@ new Splide( '.splide', {
         page  : 'splide__pagination__page',
 	},
 } ).mount();
+

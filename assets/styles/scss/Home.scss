@@ -34,12 +34,10 @@ $signature: 'Beauty', sans-serif;
 
 /*
     TO DO:
-    - minimize images weight
+    - fix splide ( add some changes )
     - fix social links hover effect
     - and maybe add some changes to social links
-    - add more slides ( six slides )
-    - add images to all slides
-    - clean the code ( splide )
+    - minimize images weight
 */
 
 body{
@@ -760,6 +758,26 @@ body{
 
                 height: 400px !important;
                 min-width: 300px !important;
+
+                overflow: hidden;
+
+                div{
+                  height: 100%;
+                  width: 130%;
+
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  img{
+                    width: 100%;
+                    height: 100%;
+
+                    filter: grayscale(90%);
+                  }
+
+                }
+
               }
 
               @media (max-width: 1330px) {
@@ -782,21 +800,7 @@ body{
             }
 
           }
-          
-          div .splide__pagination{
-            z-index: 100;
-
-            .splide__pagination__page{
-              background: red;
-
-              position: relative;
-              top: .075rem;
-
-              width: 30px;
-              height: 7px;
-            }
-
-          }
+    
         }
         @media (max-width: $widescreen) {
           .splide{

@@ -12,12 +12,10 @@
 
 /*
     TO DO:
-    - minimize images weight
+    - fix splide ( add some changes )
     - fix social links hover effect
     - and maybe add some changes to social links
-    - add more slides ( six slides )
-    - add images to all slides
-    - clean the code ( splide )
+    - minimize images weight
 */
 body {
   height: 100vh;
@@ -579,6 +577,26 @@ body .body-sections .blog_slider-section .splide .splide__track .splide__list .s
   border: 5px solid red;
   height: 400px !important;
   min-width: 300px !important;
+  overflow: hidden;
+}
+body .body-sections .blog_slider-section .splide .splide__track .splide__list .splide__slide div {
+  height: 100%;
+  width: 130%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .body-sections .blog_slider-section .splide .splide__track .splide__list .splide__slide div img {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: grayscale(90%);
+          filter: grayscale(90%);
 }
 @media (max-width: 1330px) {
   body .body-sections .blog_slider-section .splide .splide__track .splide__list .splide__slide {
@@ -592,16 +610,6 @@ body .body-sections .blog_slider-section .splide .splide__track .splide__list .s
     min-width: 0px !important;
     width: 200px !important;
   }
-}
-body .body-sections .blog_slider-section .splide div .splide__pagination {
-  z-index: 100;
-}
-body .body-sections .blog_slider-section .splide div .splide__pagination .splide__pagination__page {
-  background: red;
-  position: relative;
-  top: 0.075rem;
-  width: 30px;
-  height: 7px;
 }
 @media (max-width: 1220px) {
   body .body-sections .blog_slider-section .splide {

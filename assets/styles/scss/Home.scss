@@ -35,7 +35,6 @@ $signature: 'Beauty', sans-serif;
 /*
     TO DO:
     - add some changes to social links ( change size of icons and space between )
-    - minimize images weight ( background, gif and about ) 
 */
 
 body{
@@ -688,6 +687,25 @@ body{
 
         }
         
+      }
+
+      @media (min-width: 2000px) {
+
+        .head-section-content{
+
+          .social-links{
+            ul li{
+                margin-left: .5rem;
+                margin-right: .5rem;
+              
+               a{
+                font-size: 3.65em;
+               }
+            }
+          }
+          
+        }
+
       }
 
     } 

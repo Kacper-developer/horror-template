@@ -34,7 +34,7 @@ $signature: 'Beauty', sans-serif;
 
 /*
     TO DO:
-    - add some changes to social links ( change size of icons and space between )
+    - change responsive design on tablet and mobile view
 */
 
 body{
@@ -703,7 +703,7 @@ body{
                }
             }
           }
-          
+
         }
 
       }
@@ -815,6 +815,14 @@ body{
                   min-width: 250px !important;
                 }
 
+                @media (max-width: 965px) {
+                  .splide__slide{
+                    height: 275px !important;
+                    width: 225px !important;
+                    min-width: 0px !important;
+                  }
+                }
+
                 @media (max-width: $tablet) {
 
                   .splide__slide{
@@ -834,15 +842,15 @@ body{
 
         @media (max-width: $widescreen) {
           .splide{
+            height: 25rem;
             width: 60%;
-            min-width: 732px;
+            min-width: 850px;
           }
 
-          @media (max-width: $tablet) {
+          @media (max-width: 965px) {
 
             .splide{
-              width: 100%;
-              max-width: 300px;
+             min-width: 740px;
             }
             
           }

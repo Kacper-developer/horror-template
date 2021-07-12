@@ -34,9 +34,8 @@ $signature: 'Beauty', sans-serif;
 
 /*
     TO DO:
-    - fix splide ( add some changes )
     - add some changes to social links ( change size of icons and space between )
-    - minimize images weight
+    - minimize images weight ( background, gif and about ) 
 */
 
 body{
@@ -703,7 +702,7 @@ body{
 
       //slider
       .blog_slider-section{
-        margin-top: 10rem;
+        margin-top: 15rem;
 
         height: 35rem;
         width: 100%;
@@ -712,8 +711,10 @@ body{
         justify-content: center;
 
         .splide{
-          width: 80%;
-          max-width: 1536px;
+          width: 85%;
+          max-width: 1580px;
+
+          display: flexbox;
 
           .splide__arrows{
             position: relative;
@@ -723,7 +724,7 @@ body{
 
               .arrow-icon{
                 color: red;
-                font-size: 40px;
+                font-size: 50px;
               }
 
               .arrow-icon-first{
@@ -736,12 +737,22 @@ body{
               }
 
             }
+
           }
+
           @media (max-width: 1330px) {
             .splide__arrows{
 
               top: 9.5rem;
 
+            }
+
+            @media (max-width: 850px) {
+              .splide__arrows{
+                .splide__arrow{
+                  font-size: 40px;
+                }
+              }
             }
 
             @media (max-width: $tablet) {
@@ -752,9 +763,13 @@ body{
               }
             }
           }
+
           .splide__track{
+            display: flex;
 
             .splide__list{
+              margin-left: auto;
+              margin-right: auto;
 
               .splide__slide{
                 border: 5px solid red;
@@ -762,25 +777,18 @@ body{
                 height: 400px !important;
                 min-width: 300px !important;
 
+                margin-right: .5rem;
+
                 overflow: hidden;
 
-                div{
-                  height: 100%;
-                  width: 130%;
+                transition: filter .65s;
 
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
+                cursor: pointer;
 
-                  img{
-                    width: 100%;
-                    height: 100%;
+              }
 
-                    filter: grayscale(90%);
-                  }
-
-                }
-
+              .splide__slide:hover{
+                filter: grayscale(50%);
               }
 
               @media (max-width: 1330px) {
@@ -805,6 +813,7 @@ body{
           }
     
         }
+
         @media (max-width: $widescreen) {
           .splide{
             width: 60%;
@@ -820,6 +829,7 @@ body{
             
           }
         }
+
       }
 
       @media (max-width: $widescreen) {
@@ -830,7 +840,7 @@ body{
         @media (max-width: $tablet) {
 
           .blog_slider-section{
-            margin-top: 2rem;
+            margin-top: 10rem;
 
             height: 25rem;
           }
@@ -927,6 +937,8 @@ body{
                 z-index: 1;
 
                 border: none;
+
+                cursor: pointer;
 
                 p{
                   font-size: 2em;

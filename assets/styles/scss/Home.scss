@@ -31,11 +31,16 @@ $signature: 'Beauty', sans-serif;
     scroll-behavior: smooth;
 }
 
-
 /*
-    TO DO:
-    - change responsive design on tablet and mobile view
+
+  LAST NOTE:
+   - Uhhh. Thanks for visiting my code.
+   It was so boring when it come to the end.
+   But fortunately I have sushi for dinner!
+   Have fun with my code, while I will eat sushi :P
+   
 */
+
 
 body{
     height: 100vh;
@@ -320,8 +325,8 @@ body{
         //social links
         .social-links{
           position: absolute;
-          bottom: 1%; 
-          left: 5%;
+          bottom: -.5%; 
+          left: 1%;
 
           color: red;
 
@@ -331,7 +336,7 @@ body{
           width: auto;
 
           ul{
-            display: block;
+            display: flex;
 
             width: 100%;
 
@@ -373,7 +378,7 @@ body{
           
           .box-container{
 
-            top: 1rem;
+            bottom: .5%;
 
           }
         
@@ -381,7 +386,9 @@ body{
 
           .social-links{
             width: 5rem;
+
             left: 2.5%;
+            bottom: 1%;
 
             ul{
               display: flex;
@@ -471,10 +478,11 @@ body{
 
              .social-links{
                width: 2.5rem;
-               left: auto;
+
+               left: 2%;
 
                ul{
-                 display: block;
+                 display: flex;
                  
                  li{
                   margin-top: 1rem;
@@ -484,6 +492,14 @@ body{
                }
                
              }
+
+          }
+
+          @media (max-height: 505px) {
+
+            .social-links{
+              display: none;
+            }
 
           }
 
@@ -520,6 +536,18 @@ body{
 
           }
 
+        }
+
+        @media (min-width: 600px) {
+          .social-links{
+            bottom: 1rem;
+          }
+
+          @media (min-width: 630px) {
+            .social-links{
+              bottom: 1.5rem;
+            }
+          }
         }
 
         @media (min-width: $tablet) {
@@ -768,18 +796,37 @@ body{
             @media (max-width: 850px) {
               .splide__arrows{
                 .splide__arrow{
-                  font-size: 40px;
+                  margin-right: 1rem;
+                  margin-left: 1rem;
                 }
               }
             }
 
-            @media (max-width: $tablet) {
+            @media (max-width: 815px) {
               .splide__arrows{
+                top: 20rem;
+                width: 200px;
 
-                display: none;
                 
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+
+                .splide__arrow{
+                  margin-right: 0;
+                  margin-left: 0;
+                }
+
+              }
+              
+            }
+
+            @media (max-width: 475px) {
+              .splide__arrows{
+                width: 100px;
               }
             }
+
           }
 
           .splide__track{
@@ -853,6 +900,45 @@ body{
              min-width: 740px;
             }
             
+          }
+
+          @media (max-width: $tablet) {
+            .splide{
+              width: 100%;
+
+              overflow: hidden;
+
+              display: flex;
+              margin-left: auto;
+              margin-right: auto;
+              justify-content: center;
+
+              .splide__list{
+                display: flex;
+                justify-content: center;
+
+                .splide__track{
+                  display: flex;
+                  justify-content: center;
+                }
+
+              }
+
+            }
+          }
+
+          @media (max-width: 740px) {
+            .splide{
+              position: relative;
+              left: -.45rem;
+            }
+          }
+
+          @media (max-width: 475px) {
+            .splide{
+              position: relative;
+              left: .2rem;
+            }
           }
         }
 
